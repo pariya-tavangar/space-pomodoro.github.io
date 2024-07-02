@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../style/settings.css">
+</head>
+<body>
+
+
+<div class="outer">
+    <div class="row" id="navbar-main">
+        <div class="col">
+              <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5c4b38;">
+                <a class="navbar-brand" href="index.html"><img src="../img/pomodoro-logo.png" width="50px"> Space Pomodoro</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pomodoro.html"> Pomodoro </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="todolist.html"> Todolist </a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="settings.html"> Settings </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html"> About </a>
+                    </li>
+                  </ul>
+                  <span class="navbar-text">
+                    It's Your Local Time Manager
+                  </span>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+        <div class="row">
+          <div class="col">
+            <div class="container" id="setting-title">
+            <h1>Customize Your Workspace</h1>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col">
+            <div class="container mt-5" id="setting-panel">
+            <h3>Background Color</h3>
+
+              <div class="container">
+                <button id="btn-red" class="circle-color" style="background-color:#db3545;"></button>
+                <button id="btn-orange" class="circle-color" style="background-color:#fc9642;"></button>
+                <button id="btn-yellow" class="circle-color" style="background-color:#ffcd38;"></button>
+                <button id="btn-green" class="circle-color" style="background-color:#1a8754;"></button>
+                <button id="btn-blue" class="circle-color" style="background-color:#0d6dfc;"></button>
+                <button id="btn-purple" class="circle-color" style="background-color:#8b68cc;"></button>
+                <button id="btn-gray" class="circle-color" style="background-color:#6b757d;"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="container mt-5">
+          <h3>Background Image</h3>
+          <br>
+        <div class="row">
+          
+          <div class="col">
+            <div class="card" style="width:80%;">
+              <img src="../img/bg.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Default</h5>
+                    <button id="img-default" class="btn btn-dark">Apply</button>
+                </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width:80%;">
+              <img src="../img/cozy.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Cozy Desk</h5>
+                <button id="img-cozy" class="btn btn-dark">Apply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width:80%;">
+              <img src="../img/fireplace.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Fire Place</h5>
+                <button id="img-fire" class="btn btn-dark">Apply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" style="width:80%;">
+              <img src="../img/nature.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Nature</h5>
+                <button id="img-nature" class="btn btn-dark">Apply</button>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+</div>  
+
+ <!----------- Script ------------>
+
+ <script src="../javascript/settings.js"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
