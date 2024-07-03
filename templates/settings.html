@@ -11,135 +11,109 @@
 </head>
 <body>
 
-
 <div class="outer">
+<!---------Navbar--------->
+  <div class="container">
     <div class="row" id="navbar-main">
-        <div class="col">
-              <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5c4b38;">
-                <a class="navbar-brand" href="index.html"><img src="../img/pomodoro-logo.png" width="50px"> Space Pomodoro</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="pomodoro.html"> Pomodoro </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="todolist.html"> Todolist </a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="settings.html"> Settings </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html"> About </a>
-                    </li>
-                  </ul>
-                  <span class="navbar-text">
-                    It's Your Local Time Manager
-                  </span>
-                </div>
-            </nav>
-        </div>
-    </div>
+      <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark"  id="nav-style" style="background-color: #5c4b38;">
+              <a class="navbar-brand" href="index.html"><img src="../img/pomodoro-logo.png" width="50px"> Space Pomodoro</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pomodoro.html"> Pomodoro </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="todolist.html"> Todolist </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="settings.html"> Settings </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html"> About </a>
+                  </li>
+                </ul>
+                <span class="navbar-text">
+                  It's Your Local Time Manager
+                </span>
+              </div>
+          </nav>
+      </div>
+  </div>
+  </div>
 
 
+      <!--------- Cards --------->
+      <div class="container w-50">
         <div class="row">
-          <div class="col">
-            <div class="container" id="setting-title">
-            <h1>Customize Your Workspace</h1>
+          <div class="col p-3">
+            <div class="card white-theme">
+              <div class="card-body">
+                <h5 class="card-title"><b>Profile</b></h5>
+                <p class="card-text">Set or change your personal information.</p>
+                <a href="#" class="btn btn-dark btn-cards">Profile Panel</a>
+              </div>
+            </div>
+          </div>
+          <div class="col p-3">
+            <div class="card white-theme">
+              <div class="card-body">
+                <h5 class="card-title"><b>Theme</b></h5>
+                <p class="card-text">Customize your workspace with your taste.</p>
+                <a href="theme.html" class="btn btn-dark btn-cards">Theme Panel</a>
+              </div>
             </div>
           </div>
         </div>
-
-
         <div class="row">
-          <div class="col">
-            <div class="container mt-5" id="setting-panel">
-            <h3>Background Color</h3>
-
-              <div class="container">
-                <button id="btn-red" class="circle-color" style="background-color:#db3545;"></button>
-                <button id="btn-orange" class="circle-color" style="background-color:#fc9642;"></button>
-                <button id="btn-yellow" class="circle-color" style="background-color:#ffcd38;"></button>
-                <button id="btn-green" class="circle-color" style="background-color:#1a8754;"></button>
-                <button id="btn-blue" class="circle-color" style="background-color:#0d6dfc;"></button>
-                <button id="btn-purple" class="circle-color" style="background-color:#8b68cc;"></button>
-                <button id="btn-gray" class="circle-color" style="background-color:#6b757d;"></button>
+          <div class="col p-3">
+            <div class="card white-theme">
+              <div class="card-body">
+                <h5 class="card-title"><b>Pomodoro</b></h5>
+                <p class="card-text">Adjust the timing to work more efficent.</p>
+                <a href="#" class="btn btn-dark btn-cards">Pomodoro Panel</a>
+              </div>
+            </div>
+          </div>
+          <div class="col p-3">
+            <div class="card white-theme">
+              <div class="card-body">
+                <h5 class="card-title"><b>TodoList</b></h5>
+                <p class="card-text">Modify your tasks and priorotize them.</p>
+                <a href="#" class="btn btn-dark btn-cards">Todolist Panel</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-
-
-
-        <div class="container mt-5">
-          <h3>Background Image</h3>
-          <br>
-            <div class="row">
-          
-          <div class="col d-flex justify-content-center">
-            <div class="card" style="width:80%;">
-              <img src="../img/bg.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Default</h5>
-                    <button id="img-default" class="btn btn-dark">Apply</button>
-                </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card" style="width:80%;">
-              <img src="../img/cozy.jpeg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Cozy Desk</h5>
-                <button id="img-cozy" class="btn btn-dark">Apply</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card" style="width:80%;">
-              <img src="../img/fireplace.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Fire Place</h5>
-                <button id="img-fire" class="btn btn-dark">Apply</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col d-flex justify-content-center">
-            <div class="card" style="width:80%;">
-              <img src="../img/nature.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Nature</h5>
-                <button id="img-nature" class="btn btn-dark">Apply</button>
-              </div>
-            </div>
-          </div>
-
-
-            </div>
+      <!---------- Footer -------------->
+      <div class="container">
+        <footer class=" footer text-center" id="footer-style">
+        <!-- Grid container -->
+        <div class="container pt-1 pb-2">
+          <section class="mb-1">
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button" data-mdb-ripple-color="dark"> <i class="fab fa-instagram"></i></a>
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+            <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+          </section>
+          <p class="text-light">All Rights Reserved to Space Pomodoro</p>
         </div>
-
-
-        <div class="row">
-          <div class="col">
-            <div class="container mt-5" id="setting-panel">
-            <h3>Pomodoro Timer</h3>
-
-              
-            </div>
-          </div>
-        </div>
-</div>  
-
+      
+      
+      
+        </footer>
+      </div>
+      
+    
+</div>
  <!----------- Script ------------>
-
  <script src="../javascript/settings.js"></script>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
