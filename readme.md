@@ -11,27 +11,16 @@
 - [x] [Fix bg freeze]()
 - [ ] [Add userlogin]()
 - [ ] [Connect framework]()
-- [ ] [Cleanup css]
-- [ ] [Cleanup js]
+- [ ] [Cleanup css]()
+- [ ] [Cleanup js]()
 
 ## How to Run ▶
 
 1- Clone project via command below
 
 ```
-user> cd Desktop/main.py
+[user> cd Desktop/main.py](https://github.com/pariya-tavangar/space-pomodoro.github.io.git)
 ```
-
-➡ terminate callbacks if caused possible conflicts in test
-
-
-![orangebats-pfp](img/profile.jpg)
-## Features ⚙
-* Recieving Updated Mtproto Proxy
-* Recieving Updated Configs
-* Joining The Channel Via Link
-
-<br/>
 
 ## Countribute 🤝
 Feel free to contribute
