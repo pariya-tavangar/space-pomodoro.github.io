@@ -28,7 +28,7 @@
   } 
   
   body {
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/mountain.jpg');
   }
   
   
@@ -59,7 +59,7 @@
   
   #index-title{
     color: white;
-    background-color: rgba(0,0,0,0.7);
+    background-color: #6b696787;
     padding: 4em 2em;
     border-radius: 0.5em;
     height: 80%;
@@ -83,7 +83,7 @@
 
   .parallax {
     /* The image used */
-    background-image: url('../img/bg.jpg');
+    background-image: url('../img/mountain.jpg');
   
     /* Full height */
     height: 100%; 
@@ -99,6 +99,10 @@
         }
 
     .accordion-button:not(.collapsed){
-       color: black;
-       background-color: var(--light-brown);
+       color: rgb(255, 255, 255);
+       background-color: rgb(11, 1, 1);
+    }
+
+    .accordion-button:not(.collapsed)::after{
+      transform: white;
     }
