@@ -6,7 +6,9 @@
   --primary-blue:#0d6dfc;
   --primary-purple:#8b68cc;
   --primary-gray: #6b757d;
+  --light-brown: #c6b4a0;
   --second-site:rgb(249, 238, 225);
+  --bg-width: 0%
 
 }
 
@@ -26,9 +28,9 @@ h3{
   text-align: center;
 } 
 
-body {
-  background-image: url('../img/bg.jpg');
-}
+/* body {
+  background-image: url('../img/mountain.jpg');
+} */
 
 
 a{
@@ -58,8 +60,8 @@ a{
 
 #index-title{
   color: white;
-  background-color: rgba(0,0,0,0.7);
-  padding: 4em 2em;
+  /* background-color: #6b696787; */
+
   border-radius: 0.5em;
   height: 80%;
   margin-bottom: 11%;
@@ -76,7 +78,162 @@ a{
 }
 
 #footer-style{
-  background-color: #5c4b38;
-  border-top-left-radius: 70px;
-  border-top-right-radius: 70px;
+  background-color: #282828;
+}
+
+
+  body, html {
+      height: 100%;
+      }
+
+  .accordion-button:not(.collapsed){
+     color: rgb(255, 255, 255);
+     background-color: var(--primary-red);
+  }
+
+  .accordion-button:not(.collapsed)::after{
+    transform: white;
+  }
+
+  .parallax {
+
+
+    /* The image used */
+    background-image: url(../img/InShot_20240825_181834857.gif);
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+
+    .parallax2 {
+      /* The image used */
+      background-image: url('../img/mountain.jpg');
+    
+      /* Full height */
+      height: 30%; 
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;}
+
+
+      #btn-back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+
+      }
+
+.btn-go:hover{
+background-color: white;
+color: black;
+}
+
+
+
+#title-content{
+text-align: left;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 10px;
+}
+
+#main-title{
+background-color: #000000;
+color: white;
+border-radius: 10px;
+padding: 15px;
+}
+
+
+
+/*---------- typing effect class */
+
+.text-js{
+opacity: 0;
+}
+.cursor{
+display: block;
+position: absolute;
+height: 100%;
+top: 0;
+right: -5px;
+width: 2px;
+/* Change colour of Cursor Here */
+background-color: white;
+z-index: 1;
+animation: flash 0.5s none infinite alternate;
+}
+@keyframes flash{
+0%{
+  opacity: 1;
+}
+100%{
+  opacity: 0;
+}
+}
+
+
+
+.headline{
+margin: 20px;
+color: white;
+font-size: 32px;
+text-align: center;
+h1{
+  letter-spacing: 1.6px;
+  font-weight: 300;
+}
+}
+
+.twitterLink{
+position: absolute;
+bottom: 0;
+right: 0;
+margin: 10px 15px;
+z-index: 3;
+svg{
+  width: 25px;
+}
+}
+
+
+
+.highlight, .highlight :link{
+color: black;
+text-decoration: none;
+background-position-y: -0%;
+background-image: linear-gradient( rgba(255, 255, 255, 0) 50%,  #f9203673 50%);
+transition: background 500ms ease;
+background-size: 2px;
+background-size: auto 175%;
+}
+
+.highlight:hover {
+background-position-y: 100%;
+}
+
+
+.shadow-text{
+color: #000000;
+font-size: 30pt;
+position: relative;
+margin: 10px;
+}
+
+.shadow-text2{
+position: absolute;
+font-size: 30pt;
+filter: blur(8px);
+top: 20px;
+left: 110px;
 }
