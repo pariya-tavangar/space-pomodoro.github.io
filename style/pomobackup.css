@@ -1,0 +1,126 @@
+:root{
+    --primary-red : #db3545;
+    --primary-orange: #fc9642;
+    --primary-yellow: #ffcd38;
+    --primary-green: #1a8754;
+    --primary-blue:#0d6dfc;
+    --primary-purple:#8b68cc;
+    --primary-gray: #6b757d;
+    --primary-site:#5c4b38;
+    --second-site:rgb(249, 238, 225);
+    --shade-site:rgba(0,0,0,0.5);
+    --null-shade-site:rgba(255, 255, 255, 0);
+  }
+  
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+  } 
+  
+  body {
+    background-image: url('../img/bg.jpg');
+    background-color:var(--shade-site);
+    height: 100%;
+  }
+  
+  a{
+  color: white;
+  text-decoration: none; }
+  
+  
+  .outer{
+      background-color:var(--shade-site);
+  }
+  
+  
+  .circle-color{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-block;
+  }
+  
+  
+  .white-theme{
+    background-color:rgba(249, 238, 225, 0.826);
+    border-radius: 10px;
+  }
+  
+  .dark-theme{
+    background-color:var(--primary-site);
+  }
+  
+  
+  .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{
+      color:black;
+      background-color: white;
+      border-radius: 5px;
+  }
+  
+  #navbar-main{
+    margin-bottom: 5%;
+  }
+  
+  #setting-title{
+    color: white;
+    padding: 10px 10px;
+  }
+  
+  #setting-panel{
+    color: white;
+    width: 4000px;
+    height: 150px;
+    margin-top: 20px;
+    padding: 15px 15px;
+    border-radius: 0.5em;
+  }
+  
+  #nav-style{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  #footer-style{
+    background-color:var(--primary-site);
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    margin-top: 10%;
+    }
+  
+  #pomodoro-style{
+    margin: 10px;
+  }
+  
+  #number-style{
+    font-size:100px;
+    color:var(--second-site);
+    font-weight:700;
+  }
+    
+  #btn-controls{
+  font-size: 18px;
+  background-color: var(--second-site);
+  }
+  
+  #btn-controls:hover{
+    font-size: 18px;
+    background-color: var(--null-shade-site);
+    color: var(--second-site);
+    border-style: solid;
+    border-color: var(--second-site);
+  }
+  
+  #btn-controls:focus{
+    font-size: 18px;
+    background-color: var(--null-shade-site);
+    color: var(--second-site)
+  }
+  
+  #footer-style{
+    background-color: #282828;
+  }
