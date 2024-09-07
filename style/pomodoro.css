@@ -29,18 +29,15 @@ h3{
 }
 
 .outer{
-  height:600px;
-  background-image: url('../img/mountain.jpg');
   height: 100%;
   /* background-repeat: no-repeat; */
 
 }
 
-/* body {
+body {
   background-image: url('../img/mountain.jpg');
   background-repeat: no-repeat;
-
-} */
+}
 
 
 a{
@@ -90,7 +87,8 @@ a{
 }
 
 #footer-style{
-  background-color: #282828;
+background-color: #282828;
+
 }
 
 
