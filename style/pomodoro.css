@@ -28,15 +28,18 @@ h3{
   background-color:#5C4B38;
 }
 
-/* .outer{
+.outer{
+  height:600px;
   background-image: url('../img/mountain.jpg');
-
-} */
-
-body {
-  background-image: url('../img/mountain.jpg');
+  /* background-repeat: no-repeat; */
 
 }
+
+/* body {
+  background-image: url('../img/mountain.jpg');
+  background-repeat: no-repeat;
+
+} */
 
 
 a{
@@ -57,12 +60,6 @@ a{
   border-bottom-right-radius: 20px;
 }
 
-#footer-style{
-  background-color:var(--primary-site);
-  border-top-left-radius: 70px;
-  border-top-right-radius: 70px;
-  margin-top: 10%;
-  }
 
   #pomodoro-style{
     margin: 10px;
