@@ -29,15 +29,15 @@ h3{
   background-color:#5C4B38;
 }
 
-.outer{
+/* .outer{
   height: 100%;
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat; */
 
-}
+
 
 body {
   background-image: url('../img/mountain.jpg');
-  background-size: auto 100%;
+  background-size: 100% 100%;
 }
 
 
@@ -64,9 +64,7 @@ a{
     margin: 10px;
   }
   
-#navbar-main{
-  margin-bottom: 8%;
-}
+
 
 #index-title{
   color: white;
@@ -273,4 +271,16 @@ background-color: var(--second-site);
   font-size: 18px;
   background-color: var(--null-shade-site);
   color: var(--second-site)
+}
+
+#center-timer{
+  display: inline;
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+  height: 250px;
+  margin: auto;
+  
 }
