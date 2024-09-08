@@ -37,7 +37,7 @@ h3{
 
 body {
   background-image: url('../img/mountain.jpg');
-  background-size: 100%;
+  background-size: auto 100%;
 }
 
 
