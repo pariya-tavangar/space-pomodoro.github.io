@@ -352,7 +352,7 @@ transition: 0.5s;
 
 .start-btn{width: 130px;}
 .reset-btn{width: 70px;}
-.img{ width: 30px;}
+
 
   /*---------mobile device---------*/
   @media screen and (max-width:700px){
