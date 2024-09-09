@@ -309,8 +309,8 @@ background-color: var(--second-site);
     border-radius: 100px;
     position: absolute;
     width: 80px;
-    margin-top: 10%; 
-    margin-left:30px;
+    top: 25%;
+    margin-left: 30px;
     background-color: #faefe1bb;
     }
   
@@ -321,6 +321,7 @@ background-color: var(--second-site);
     height: 70px;
     align-content: center;
     background-color: #faefe100;
+
   }
 
 
@@ -328,6 +329,10 @@ background-color: var(--second-site);
     width: 30px;
   }
 
+#home:hover{
+  background-color: #f9f3ecdc;
+  transition: 0.5s;
+}
 
   /* #menu-btn-img:hover{
     width: 40px;
@@ -340,10 +345,11 @@ background-color: var(--second-site);
     width: 70px;
     height: 70px;
     align-content: center;
-    background-color: #f9f3ecdc;
   }
 
 
+
+  /*mobile device*/
   @media screen and (max-width:700px){
     #menu-btn{
       justify-content: center;
