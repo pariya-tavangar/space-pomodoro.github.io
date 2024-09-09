@@ -267,6 +267,7 @@ border-style: solid;
 padding: 5px;
 border-radius: 8px;
 background-color: var(--second-site);
+transition: 0.5s;
 }
 
 #btn-controls:hover{
@@ -321,6 +322,7 @@ background-color: var(--second-site);
     height: 70px;
     align-content: center;
     background-color: #faefe100;
+    transition: 0.5s;
 
   }
 
@@ -333,6 +335,7 @@ background-color: var(--second-site);
   background-color: #f9f3ecdc;
   transition: 0.5s;
 }
+
 
   /* #menu-btn-img:hover{
     width: 40px;
