@@ -142,7 +142,7 @@ html,body {
   position:relative;
   z-index: 2;
   top: 20%;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   border: 1px solid #ddd;
   border-radius: 15px;
 }
@@ -206,6 +206,15 @@ html,body {
 .hidden {display: none;}
 
 
+
+p.menu-btn-title{
+  color: white;
+  font-size: 20px;
+}
+
+.menu-btn-img{
+  width: 40px;
+}
 
 /*---------mobile device---------*/
 @media screen and (max-width:700px){

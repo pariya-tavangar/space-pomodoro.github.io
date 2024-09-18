@@ -48,15 +48,63 @@
 
         <button class="btn-close">⨉</button>
       </div>
-      <div>
-        <h4>Background Color</h4>
-        <button>red</button>
-        <button>orange</button>
-        <button>yellow</button>
-        <button>green</button>
+  
+  
+
+        <div class="container">
+          <div class="row">
+              <div class="col-3 mr-4" style="background-color: rgba(0, 0, 0, 0.619); border-radius: 10px;">
+
+                  <div class="row p-3" style="background-color: rgba(50, 50, 50, 0.724) ; padding: 20px;">
+                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/timer.png" alt=""></a></div>
+                      <div class="col"><p class="menu-btn-title">Timer</p></div>
+                  </div>
+                  <div class="row p-3">
+                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/theme.png" alt=""></a></div>
+                      <div class="col"><p class="menu-btn-title">Theme</p></div>
+                  </div>
+                  <div class="row p-3">
+                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/sound.png" alt=""></a></div>
+                      <div class="col"><p class="menu-btn-title">Sound</p></div>
+                  </div>
+                  <div class="row p-3">
+                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/about.png" alt=""></a></div>
+                      <div class="col"><p class="menu-btn-title">About</p></div>
+                  </div>
+
+              </div>
+              <div class="col" style="background-color: rgb(0, 0, 0, 0.619);">
+                  <h3 style="padding: 10px; font-size: 20px; color: white;">Background Color</h3>
+                      <select class="custom-select" id="color-list">
+                              <option selected>select color</option>
+                              <option value="red">Red</option>
+                              <option value="orange">Orange</option>
+                              <option value="yellow">Yellow</option>
+                              <option value="green">Green</option>
+                              <option value="blue">Blue</option>
+                              <option value="purple">Purple</option>
+                              <option value="gray">Gray</option>
+                      </select> 
+                      <br><br><br>
+
+                      <h3 style="padding: 10px; font-size: 20px; color: white;">Background Theme</h3>
+                      <select class="custom-select" id="img-list">
+                          <option selected>select theme</option>
+                          <option value="default-img">Default Theme</option>
+                          <option value="cozy-room">Cozy Room</option>
+                          <option value="fireplace">Fire Place</option>
+                          <option value="nature">Nature</option>
+                      </select>     
+
+
+
+              </div>
+          
+
+          </div>
       </div>
     
-      <button class="btn">Submit</button>
+
     </section>
     
     <div class="overlay hidden"></div>
