@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+b<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,13 +47,14 @@
       <div class="flex">
 
         <button class="btn-close">⨉</button>
+        <button id="hide-btn">-</button>
       </div>
   
   
 
         <div class="container">
-          <div class="row">
-              <div class="col-3 mr-4" style="background-color: rgba(0, 0, 0, 0.619); border-radius: 10px;">
+          <div class="row" id="timer-panel">
+              <div class="col-3 mr-4" id="timer-panel" style="background-color: rgba(0, 0, 0, 0.619); border-radius: 10px;">
 
                   <div class="row p-3" style="background-color: rgba(50, 50, 50, 0.724) ; padding: 20px;">
                       <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/timer.png" alt=""></a></div>
@@ -73,7 +74,7 @@
                   </div>
 
               </div>
-              <div class="col" style="background-color: rgb(0, 0, 0, 0.619);">
+              <div class="col" id="theme-panel" style="background-color: rgb(0, 0, 0, 0.619);">
                   <h3 style="padding: 10px; font-size: 20px; color: white;">Background Color</h3>
                       <select class="custom-select" id="color-list">
                               <option selected>select color</option>
@@ -95,13 +96,9 @@
                           <option value="fireplace">Fire Place</option>
                           <option value="nature">Nature</option>
                       </select>     
-
-
-
               </div>
-          
-
           </div>
+
       </div>
     
 
@@ -145,7 +142,9 @@
 <!--------- footer --------->
 
 
+<script>
 
+</script>
 <!-- </div> -->
 
     <!----------- Script ------------>

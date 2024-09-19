@@ -114,6 +114,18 @@ const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".btn-open");
 const closeModalBtn = document.querySelector(".btn-close");
 
+var timerpanel = document.getElementById("timer-panel");
+var themepanel = document.getElementById("theme-panel");
+const hidebtn = document.getElementById("hide-btn")
+
+
+document.addEventListener("click",hidebtn)
+{
+  if (timerpanel.style.display=="none")
+    {timerpanel.style.display=="block"};
+};
+
+
 // close modal function
 const closeModal = function () {
   modal.classList.add("hidden");
