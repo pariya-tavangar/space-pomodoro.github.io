@@ -129,7 +129,9 @@ html,body {
 }
 
 
-
+hr.hrcolor{
+  border-top: 3px solid rgba(78, 78, 78, 0.541);
+}
 /*---------modal---------*/
 .modal {
   display: flex;
@@ -138,7 +140,7 @@ html,body {
   gap: 0.4rem;
   width: 60%;
   margin-left: 20%;
-  padding: 1.3rem;
+  padding: 1.5rem;
   min-height: 250px;
   position:relative;
   z-index: 2;
