@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+b<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,62 +9,169 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="../style/settings-design.css">
 </head>
+
+
 <body>
-    <section class="modal hidden">
-        
-        <div class="container">
-            <div class="row">
-                <div class="col-3 mr-4" style="background-color: rgba(0, 0, 0, 0.619); border-radius: 10px;">
-
-                    <div class="row p-3" style="background-color: rgba(50, 50, 50, 0.724) ; padding: 20px;">
-                        <div class="col"><a href="" class="button"><img src="../img/timer.png" alt=""></a></div>
-                        <div class="col"><p>Timer</p></div>
-                    </div>
-                    <div class="row p-3">
-                        <div class="col"><a href="" class="button"><img src="../img/theme.png" alt=""></a></div>
-                        <div class="col"><p>Theme</p></div>
-                    </div>
-                    <div class="row p-3">
-                        <div class="col"><a href="" class="button"><img src="../img/sound.png" alt=""></a></div>
-                        <div class="col"><p>Sound</p></div>
-                    </div>
-                    <div class="row p-3">
-                        <div class="col"><a href="" class="button"><img src="../img/about.png" alt=""></a></div>
-                        <div class="col"><p>About</p></div>
-                    </div>
-
-                </div>
-                <div class="col" style="background-color: rgb(0, 0, 0, 0.619);">
-                    <h3 style="padding: 10px; font-size: 20px; color: white;">Background Color</h3>
-                        <select class="custom-select" id="color-list">
-                                <option selected>select color</option>
-                                <option value="red">Red</option>
-                                <option value="orange">Orange</option>
-                                <option value="yellow">Yellow</option>
-                                <option value="green">Green</option>
-                                <option value="blue">Blue</option>
-                                <option value="purple">Purple</option>
-                                <option value="gray">Gray</option>
-                        </select> 
-                        <br><br><br>
-
-                        <h3 style="padding: 10px; font-size: 20px; color: white;">Background Theme</h3>
-                        <select class="custom-select" id="img-list">
-                            <option selected>select theme</option>
-                            <option value="default-img">Default Theme</option>
-                            <option value="cozy-room">Cozy Room</option>
-                            <option value="fireplace">Fire Place</option>
-                            <option value="nature">Nature</option>
-                        </select>     
 
 
-
-                </div>
-            
-
-            </div>
+    <!--------- pomodoro --------->
+    <div id="center-timer">
+      <div class="row" id="pomodoro-style">
+        <div class="col">
+          <a href="#" class="button" id="btn-controls" role="button">pomodoro</a>
+          <a href="#" class="button" id="btn-controls" role="button">short break</a>
+          <a href="#" class="button" id="btn-controls" role="button">long break</a>
         </div>
+      </div>
 
+      <div class="row" id="pomodoro-style">
+        <div class="col">
+        <p id="number-style" class="m-4">45:00</p>
+      </div>
+      </div>
+
+      <div class="row" id="pomodoro-style">
+        <div class="col">
+          <a href="#" class="start-btn" id="btn-controls" role="button">start</a>
+          <a href="#" class="reset-btn" id="btn-controls" role="button">reset</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  <!------------ modal--------------->
+    <section class="modal hidden">
+      <div class="flex">
+        <a href="#" class="btn-close" role="button"><img class="exit-btn-img" src="../img/closebtn.png" alt=""></a>
+      </div>
+  
+  
+        <!----- BUTTONS ------>
+        <div class="container">
+          <div class="row">
+              <div class="col-3 mr-4" id="timer-panel" style="background-color: rgba(0, 0, 0, 0.619); border-radius: 10px;">
+
+                  <div class="row p-3">
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/timer.png" alt=""></div>
+                      <p class="menu-btn-title">Timer</p>
+                    </button>
+                  </div>
+                
+
+                  <div class="row p-3">
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/theme.png" alt=""></div>
+                      <p class="menu-btn-title">Theme</p>
+                    </button>
+                  </div>
+
+                  <div class="row p-3">
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/sound.png" alt=""></div>
+                      <p class="menu-btn-title">Sound</p>
+                    </button>
+                  </div>
+
+                  <div class="row p-3">
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/about.png" alt=""></div>
+                      <p class="menu-btn-title">ABout</p>
+                    </button>
+                  </div>
+
+              </div>
+              <!----- BUTTONS (end)------>
+              
+              <!----- THEME  ------->
+              <div class="col" id="" style="background-color: rgb(0, 0, 0, 0.619);">
+                  <h3 style="padding: 10px; font-size: 20px; color: white;">Background Color</h3>
+                      <select class="custom-select" id="color-list">
+                              <option selected>select color</option>
+                              <option value="red">Red</option>
+                              <option value="orange">Orange</option>
+                              <option value="yellow">Yellow</option>
+                              <option value="green">Green</option>
+                              <option value="blue">Blue</option>
+                              <option value="purple">Purple</option>
+                              <option value="gray">Gray</option>
+                      </select> 
+                      <br/><br/><br/>
+
+                      <h3 style="padding: 10px; font-size: 20px; color: white;">Background Theme</h3>
+                      <select class="custom-select" id="img-list">
+                          <option selected>select theme</option>
+                          <option value="default-img">Default Theme</option>
+                          <option value="cozy-room">Cozy Room</option>
+                          <option value="fireplace">Fire Place</option>
+                          <option value="nature">Nature</option>
+                      </select>     
+              </div>
+              <!----- THEME (end) ------->
+
+
+
+
+          </div>
+
+      </div>
+    
+
+    </section>
+    
+    <div class="overlay hidden"></div>
+  <!------------ modal--------------->
+
+
+
+
+
+
+
+
+ 
+ <!--------- menu buttons ---------->
+    <div id="menu-btn">
+      <a href="#" class="button"><div class="btn btn-open" id="home"><img id="menu-btn-img" src="../img/maintenance-icon.svg" alt="settings"></div></a>
+      <a href="#" class="button"><div id="home"><img id="menu-btn-img" src="../img/speedometer-icon.svg" alt="pomodoro"></div></a>
+      <a href="#" class="button"><div id="home"><img id="menu-btn-img" src="../img/round-information-outline-black-icon.svg" alt=""></div></a>
+    </div>
+ <!--------- menu buttons ---------->
+
+    
+
+<!--------- footer --------->
+<!-- <section>
+  <footer class="text-center footer" id="footer-style"> -->
+    <!-- Grid container -->
+    <!-- <div class="container pt-1 pb-2">
+      <section class="mb-1">
+        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button" data-mdb-ripple-color="dark"> <i class="fab fa-instagram"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+        <a class="btn btn-link btn-floating btn-lg text-light m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
       </section>
-</body>
+      <p class="text-light">All Rights Reserved to Space Pomodoro</p>
+    </div>
+  </footer>
+</section>  -->
+<!--------- footer --------->
+
+
+<script>
+    function show_timer_panel(){
+        document.getElementById('').style.visibility='hidden';
+    }
+</script>
+<!-- </div> -->
+
+    <!----------- Script ------------>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../javascript/settings-design.js"></script>
+  </body>
 </html>

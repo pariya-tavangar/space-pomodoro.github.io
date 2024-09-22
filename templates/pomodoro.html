@@ -7,7 +7,7 @@ b<!DOCTYPE html>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../style/pomodoro.css">
+    <link rel="stylesheet" href="../style/settings-design.css">
 </head>
 
 
@@ -49,30 +49,45 @@ b<!DOCTYPE html>
       </div>
   
   
-
+        <!----- BUTTONS ------>
         <div class="container">
-          <div class="row" id="timer-panel">
+          <div class="row">
               <div class="col-3 mr-4" id="timer-panel" style="background-color: rgba(0, 0, 0, 0.619); border-radius: 10px;">
 
-                  <div class="row p-3" style="background-color: rgba(50, 50, 50, 0.724) ; padding: 20px;">
-                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/timer.png" alt=""></a></div>
-                      <div class="col"><p class="menu-btn-title">Timer</p></div>
-                  </div>
                   <div class="row p-3">
-                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/theme.png" alt=""></a></div>
-                      <div class="col"><p class="menu-btn-title">Theme</p></div>
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/timer.png" alt=""></div>
+                      <p class="menu-btn-title">Timer</p>
+                    </button>
                   </div>
+                
+
                   <div class="row p-3">
-                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/sound.png" alt=""></a></div>
-                      <div class="col"><p class="menu-btn-title">Sound</p></div>
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/theme.png" alt=""></div>
+                      <p class="menu-btn-title">Theme</p>
+                    </button>
                   </div>
+
                   <div class="row p-3">
-                      <div class="col"><a href="" class="button"><img class="menu-btn-img" src="../img/about.png" alt=""></a></div>
-                      <div class="col"><p class="menu-btn-title">About</p></div>
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/sound.png" alt=""></div>
+                      <p class="menu-btn-title">Sound</p>
+                    </button>
+                  </div>
+
+                  <div class="row p-3">
+                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                      <div class="col"><img class="menu-btn-img" src="../img/about.png" alt=""></div>
+                      <p class="menu-btn-title">ABout</p>
+                    </button>
                   </div>
 
               </div>
-              <div class="col" id="theme-panel" style="background-color: rgb(0, 0, 0, 0.619);">
+              <!----- BUTTONS (end)------>
+              
+              <!----- THEME  ------->
+              <div class="col" id="" style="background-color: rgb(0, 0, 0, 0.619);">
                   <h3 style="padding: 10px; font-size: 20px; color: white;">Background Color</h3>
                       <select class="custom-select" id="color-list">
                               <option selected>select color</option>
@@ -95,6 +110,11 @@ b<!DOCTYPE html>
                           <option value="nature">Nature</option>
                       </select>     
               </div>
+              <!----- THEME (end) ------->
+
+
+
+
           </div>
 
       </div>
@@ -141,7 +161,9 @@ b<!DOCTYPE html>
 
 
 <script>
-
+    function show_timer_panel(){
+        document.getElementById('').style.visibility='hidden';
+    }
 </script>
 <!-- </div> -->
 
@@ -150,6 +172,6 @@ b<!DOCTYPE html>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../javascript/pomodoro.js"></script>
+    <script src="../javascript/settings-design.js"></script>
   </body>
 </html>
