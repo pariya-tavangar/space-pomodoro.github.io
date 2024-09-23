@@ -12,6 +12,8 @@
   --bg-width: 0%
 }
 
+
+
 .bg-dark{
   background-color: rgb(33, 33, 33)!important;
 }
@@ -261,6 +263,17 @@ p.menu-btn-title{
 }
 
 
+
+#sound-menu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #faefe178;
+  border-radius: 10px;
+  margin: 20px;
+  padding-top: 5px;
+  
+}
 
 
 
