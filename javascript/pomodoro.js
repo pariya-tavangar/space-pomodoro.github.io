@@ -125,7 +125,7 @@ let colorBg = document.querySelector('#color-list');
 imgBg.addEventListener('change',function(){
   if (imgBg.value=='default-img'){
       document.body.style.backgroundColor='';
-      document.body.style.backgroundImage='url(../img/bg.jpg)';
+      document.body.style.backgroundImage='url(../img/warm-bg.jpeg)';
   }
   else if (imgBg.value=='cozy-room'){
       document.body.style.backgroundColor='';
@@ -135,10 +135,19 @@ imgBg.addEventListener('change',function(){
       document.body.style.backgroundColor='';
       document.body.style.backgroundImage='url(../img/fireplace.jpg)';
   }
-  else if (imgBg.value=='nature'){
+  else if (imgBg.value=='mountain'){
       document.body.style.backgroundColor='';
-      document.body.style.backgroundImage='url(../img/nature.jpg)';
+      document.body.style.backgroundImage='url(../img/mountain.jpg)';
   }
+
+  else if (imgBg.value=='paris'){
+    document.body.style.backgroundColor='';
+    document.body.style.backgroundImage='url(../img/paris.jpeg)';
+}
+  else if (imgBg.value=='nature'){
+    document.body.style.backgroundColor='';
+    document.body.style.backgroundImage='url(../img/nature.jpeg)';
+}
 
 })
 
