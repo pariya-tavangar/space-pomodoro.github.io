@@ -52,42 +52,42 @@ b<!DOCTYPE html>
         <!----- BUTTONS ------>
         <div class="container">
           <div class="row">
-              <div class="col-3 mr-4" id="" style="background-color: rgba(0, 0, 0, 0.619); border-radius: 10px;">
+              <div class="col-3 mr-3" id="" style="background-color: #5b57507d; border-radius: 10px;padding: 5px;">
 
-                  <div class="row p-3">
-                    <button type="button" class="menu-button" onclick="show_timer_panel()">
+
+                    <button type="button" id="time-btn" class="menu-button" onclick="show_timer_panel()">
                       <div class="col"><img class="menu-btn-img" src="../img/timer.png" alt=""></div>
                       <p class="menu-btn-title">Timer</p>
                     </button>
-                  </div>
+
                 
 
-                  <div class="row p-3">
+
                     <button class="menu-button" id="menu-timer" onclick="show_theme_panel()">
                       <div class="col"><img class="menu-btn-img" src="../img/theme.png" alt=""></div>
                       <p class="menu-btn-title">Theme</p>
                     </button>
-                  </div>
 
-                  <div class="row p-3">
+
+
                     <button class="menu-button" id="menu-timer" onclick="hideme()">
                       <div class="col"><img class="menu-btn-img" src="../img/sound.png" alt=""></div>
                       <p class="menu-btn-title">Sound</p>
                     </button>
-                  </div>
 
-                  <div class="row p-3">
+
+
                     <button class="menu-button" id="menu-timer" onclick="hideme()">
                       <div class="col"><img class="menu-btn-img" src="../img/about.png" alt=""></div>
                       <p class="menu-btn-title">About</p>
                     </button>
-                  </div>
+
 
               </div>
               <!----- BUTTONS (end)------>
               
               <!----- THEME  ------->
-              <div class="col" id="timer-panel" style="background-color: rgb(0, 0, 0, 0.619);">
+              <div class="col" id="timer-panel">
                 <h1 style="color: rgba(78, 78, 78, 0.541);font-weight:800; font-size: 50px;">Theme</h1>
                 <hr class="hrcolor">
                 <br/><br/>
@@ -121,12 +121,12 @@ b<!DOCTYPE html>
 
                 <div class="row">
                   <div class="col">
-                    <h4 style="padding: 10px; font-size: 17px; color: white;">Generate Background Color</h4>
+                    <h4 style="padding: 10px; font-size: 17px; color: white;">Random Theme Color</h4>
                     <button type="button" class="btn btn-dark">Generate</button>
                   </div>
 
                   <div class="col">
-                    <h4 style="padding: 10px; font-size: 17px; color: white;">Set to Default</h4>
+                    <h4 style="padding: 10px; font-size: 17px; color: white;">Set Theme to Default</h4>
                     <button type="button" class="btn btn-dark">Reset</button>
                   </div>
                 </div>
@@ -198,6 +198,6 @@ b<!DOCTYPE html>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../javascript/settings-design.js"></script>
+    <script src="../javascript/pomodoro.js"></script>
   </body>
 </html>
