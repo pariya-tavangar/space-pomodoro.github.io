@@ -109,6 +109,8 @@
 
 //--------- modal ---------------
 
+let colorPicker = document.querySelector('#color-picker');
+
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".btn-open");
@@ -151,41 +153,44 @@ imgBg.addEventListener('change',function(){
 
 })
 
-
-colorBg.addEventListener('change',function(){
-  if (colorBg.value=='red'){
-    document.body.style.backgroundImage='none';
-    document.body.style.backgroundColor='#db3545';
-  }
-  else if (colorBg.value=='orange'){
-    document.body.style.backgroundImage='none';
-    document.body.style.backgroundColor='#fc9642';
-}
-else if (colorBg.value=='yellow'){
-    document.body.style.backgroundImage='none';
-    document.body.style.backgroundColor='#ffcd38';
-}
-else if (colorBg.value=='green'){
-    document.body.style.backgroundImage='none';
-    document.body.style.backgroundColor='#1a8754';
-}
-else if (colorBg.value=='blue'){
-    document.body.style.backgroundImage='none';
-    document.body.style.backgroundColor='#0d6dfc';
-}
-else if (colorBg.value=='green'){
-    document.body.style.backgroundImage='none';
-    document.body.style.backgroundColor='#1a8754';
-}
-else if (colorBg.value=='purple'){
-    document.body.style.backgroundImage='none'; 
-    document.body.style.backgroundColor='#8b68cc';
-}
-else if (colorBg.value=='gray'){
-    document.body.style.backgroundImage='none';
-    document.body.style.backgroundColor='#6b757d';
-}
-})
+colorPicker.addEventListener('change',function(){
+  document.body.style.backgroundImage='none';
+  document.body.style.backgroundColor=colorPicker.value;}
+)
+// colorBg.addEventListener('change',function(){
+//   if (colorBg.value=='red'){
+//     document.body.style.backgroundImage='none';
+//     document.body.style.backgroundColor='#db3545';
+//   }
+//   else if (colorBg.value=='orange'){
+//     document.body.style.backgroundImage='none';
+//     document.body.style.backgroundColor='#fc9642';
+// }
+// else if (colorBg.value=='yellow'){
+//     document.body.style.backgroundImage='none';
+//     document.body.style.backgroundColor='#ffcd38';
+// }
+// else if (colorBg.value=='green'){
+//     document.body.style.backgroundImage='none';
+//     document.body.style.backgroundColor='#1a8754';
+// }
+// else if (colorBg.value=='blue'){
+//     document.body.style.backgroundImage='none';
+//     document.body.style.backgroundColor='#0d6dfc';
+// }
+// else if (colorBg.value=='green'){
+//     document.body.style.backgroundImage='none';
+//     document.body.style.backgroundColor='#1a8754';
+// }
+// else if (colorBg.value=='purple'){
+//     document.body.style.backgroundImage='none'; 
+//     document.body.style.backgroundColor='#8b68cc';
+// }
+// else if (colorBg.value=='gray'){
+//     document.body.style.backgroundImage='none';
+//     document.body.style.backgroundColor='#6b757d';
+// }
+// })
 
 
 document.addEventListener("click",hidebtn)
