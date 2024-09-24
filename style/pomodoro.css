@@ -276,6 +276,19 @@ p.menu-btn-title{
 }
 
 
+#music-btn{
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  border: rgba(0, 0, 0, 0);
+  outline: none;
+  transition: 0.5s;
+}
+
+#music-btn:hover{
+background-color: #f1e6d6;
+}
+
+
 input[type="range"] {
   /* removing default appearance */
   -webkit-appearance: none;
@@ -291,7 +304,7 @@ input[type="range"] {
 /* Track: webkit browsers */
 input[type="range"]::-webkit-slider-runnable-track {
   height: 15px;
-  background: #808080;
+  background: #a1a1a1;
   border-radius: 16px;
 }
 

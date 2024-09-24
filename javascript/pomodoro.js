@@ -109,6 +109,9 @@
 
 //--------- modal ---------------
 
+
+
+
 let colorPicker = document.querySelector('#color-picker');
 
 const modal = document.querySelector(".modal");
@@ -122,6 +125,21 @@ const hidebtn = document.getElementById("hide-btn")
 
 let imgBg = document.querySelector("#img-list");
 let colorBg = document.querySelector('#color-list');
+
+
+const rainbtn = document.querySelector(".rain-btn");
+const rainsound = new Audio("../audio/rain-01.mp3");
+
+rainbtn.addEventListener('click',function(){
+  if (rainsound.paused||rainsound.ended){
+    document.getElementById("rain-img").src="../img/icons8-pause-50.png";
+    rainsound.play();}
+    else{
+      document.getElementById("rain-img").src="../img/icons8-play-50.png";
+      rainsound.pause();
+    }
+  })
+
 
 
 imgBg.addEventListener('change',function(){
