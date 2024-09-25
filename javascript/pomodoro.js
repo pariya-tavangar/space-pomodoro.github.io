@@ -108,6 +108,12 @@
 // });
 
 //--------- modal ---------------
+const monthsOfYear = [
+  "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+
+const daysOfweek = [
+  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
+
 
 
 const modal = document.querySelector(".modal");
@@ -126,10 +132,13 @@ const rainsound = new Audio("../audio/rain-01.mp3");
 const firesound = new Audio("../audio/campfire-1.mp3");
 let rainvol = document.getElementById("rain-vol");
 let firevol = document.getElementById("fire-vol");
+let currentTime = document.getElementById("current-time");
+let currentWeek = document.getElementById("current-week");
 
 
 rainsound.volume=0.30;
 firesound.volume=0.10;
+
 
 
 
@@ -251,3 +260,21 @@ const openModal = function () {
 };
 // open modal event
 openModalBtn.addEventListener("click", openModal);
+
+
+
+// ---------------- clock ----------------
+window.onload = displayClock();
+function displayClock(){
+  var ctime = new Date();
+  var displaytime = ctime.toLocaleTimeString();
+  var displayday = ctime.getDate();
+  var today = (displayday%7-1);
+  var displaymonth = ctime.getMonth();
+  var displayday = ctime.getDate();
+  // var displayyear = ctime.getFullYear();
+  currentTime.textContent=displaytime;
+  currentWeek.textContent=daysOfweek[today]+' | '+monthsOfYear[displaymonth]+' '+displayday;
+  setTimeout(displayClock, 1000); }
+// ---------------- clock ----------------
+
