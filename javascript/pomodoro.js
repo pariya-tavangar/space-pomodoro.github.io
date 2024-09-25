@@ -134,15 +134,30 @@ let rainvol = document.getElementById("rain-vol");
 let firevol = document.getElementById("fire-vol");
 let currentTime = document.getElementById("current-time");
 let currentWeek = document.getElementById("current-week");
+const fullscreenbtn = document.getElementById("fullscreen-btn");
 
 
-rainsound.volume=0.30;
-firesound.volume=0.10;
+
+
+// ------------ fullscreen button ------------ //
+
+fullscreenbtn.addEventListener('click',function(){
+  if(document.fullscreenElement){
+    document.exitFullscreen();
+  }
+  else{
+    document.body.requestFullscreen();
+  }
+});
 
 
 
 
 // ------------ sound menu ------------ //
+
+rainsound.volume=0.30;
+firesound.volume=0.10;
+
 rainvol.addEventListener('change',function(){
   var volumerain = document.getElementById("rain-vol").value;
   rainsound.volume = volumerain/100;
