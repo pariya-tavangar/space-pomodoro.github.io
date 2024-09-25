@@ -121,18 +121,30 @@ let colorPicker = document.querySelector('#color-picker');
 let imgBg = document.querySelector("#img-list");
 let colorBg = document.querySelector('#color-list');
 const rainbtn = document.querySelector(".rain-btn");
+const firebtn = document.querySelector(".fire-btn");
 const rainsound = new Audio("../audio/rain-01.mp3");
-let volrange = document.getElementById("vol");
+const firesound = new Audio("../audio/campfire-1.mp3");
+let rainvol = document.getElementById("rain-vol");
+let firevol = document.getElementById("fire-vol");
+
 
 rainsound.volume=0.30;
+firesound.volume=0.10;
 
 
 
 // ------------ sound menu ------------ //
-volrange.addEventListener('change',function(){
-  var volumerain = document.getElementById("vol").value;
+rainvol.addEventListener('change',function(){
+  var volumerain = document.getElementById("rain-vol").value;
   rainsound.volume = volumerain/100;
 });
+
+
+firevol.addEventListener('change',function(){
+  var volumefire = document.getElementById("fire-vol").value;
+  firesound.volume = volumefire/100;
+});
+
 
 
 rainbtn.addEventListener('click',function(){
@@ -145,6 +157,18 @@ rainbtn.addEventListener('click',function(){
     }
   });
 
+
+  firebtn.addEventListener('click',function(){
+    if (firesound.paused||firesound.ended){
+    document.getElementById("fire-img").src="../img/icons8-pause-50.png";
+    firesound.play();}
+    else{
+      document.getElementById("fire-img").src="../img/icons8-play-50.png";
+      firesound.pause();
+    }
+  });
+
+
 //looping rainsound
   rainsound.addEventListener('ended', function() {
     this.currentTime = 0;
@@ -152,7 +176,11 @@ rainbtn.addEventListener('click',function(){
 }, false);
 
 
-
+//looping firesound
+firesound.addEventListener('ended', function() {
+  this.currentTime = 0;
+  this.play();
+}, false);
 
 
 
