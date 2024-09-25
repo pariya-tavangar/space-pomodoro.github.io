@@ -263,6 +263,15 @@ p.menu-btn-title{
 }
 
 
+.fullscreen-div{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff5d;
+    border-radius: 10px;
+    margin: 40px;
+  }
+
 
 #sound-menu{
   position: fixed;
