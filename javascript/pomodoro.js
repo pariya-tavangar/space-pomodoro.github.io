@@ -110,25 +110,30 @@
 //--------- modal ---------------
 
 
-
-
-let colorPicker = document.querySelector('#color-picker');
-
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".btn-open");
 const closeModalBtn = document.querySelector(".btn-close");
-
 var timerpanel = document.getElementById("timer-panel");
 var themepanel = document.getElementById("theme-panel");
 const hidebtn = document.getElementById("hide-btn")
-
+let colorPicker = document.querySelector('#color-picker');
 let imgBg = document.querySelector("#img-list");
 let colorBg = document.querySelector('#color-list');
-
-
 const rainbtn = document.querySelector(".rain-btn");
 const rainsound = new Audio("../audio/rain-01.mp3");
+let volrange = document.getElementById("vol");
+
+rainsound.volume=0.30;
+
+
+
+// ------------ sound menu ------------ //
+volrange.addEventListener('change',function(){
+  var volumerain = document.getElementById("vol").value;
+  rainsound.volume = volumerain/100;
+});
+
 
 rainbtn.addEventListener('click',function(){
   if (rainsound.paused||rainsound.ended){
@@ -139,11 +144,16 @@ rainbtn.addEventListener('click',function(){
       rainsound.pause();
     }
   });
+
 //looping rainsound
   rainsound.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
+
+
+
+
 
 
 imgBg.addEventListener('change',function(){
