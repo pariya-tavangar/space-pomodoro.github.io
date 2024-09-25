@@ -196,7 +196,7 @@ firesound.addEventListener('ended', function() {
 imgBg.addEventListener('change',function(){
   if (imgBg.value=='default-img'){
       document.body.style.backgroundColor='';
-      document.body.style.backgroundImage='url(../img/warm-bg.jpeg)';
+      document.body.style.backgroundImage='url(../img/train-station.jpg)';
   }
   else if (imgBg.value=='cozy-room'){
       document.body.style.backgroundColor='';
@@ -213,7 +213,7 @@ imgBg.addEventListener('change',function(){
 
   else if (imgBg.value=='paris'){
     document.body.style.backgroundColor='';
-    document.body.style.backgroundImage='url(../img/paris.jpeg)';
+    document.body.style.backgroundImage='url(../img/bed-coffe.jpg)';
 }
   else if (imgBg.value=='nature'){
     document.body.style.backgroundColor='';
