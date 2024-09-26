@@ -108,13 +108,24 @@
 // });
 
 //--------- modal ---------------
+
+const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
+          "“Success is not final; failure is not fatal: It is the courage to continue that counts.”",
+        "“Don’t let yesterday take up too much of today.”",
+        "“To know how much there is to know is the beginning of learning to live.”"
+        ];
+const authors = ["~ Mahatma Gandhi","~ Norman Vincent Peal","~ Winston Churchill","~ Will Rogers","~ Dorothy West"];
+
+
+
+
+
+
 const monthsOfYear = [
   "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
 
 const daysOfweek = [
   "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
-
-
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -135,6 +146,20 @@ let firevol = document.getElementById("fire-vol");
 let currentTime = document.getElementById("current-time");
 let currentWeek = document.getElementById("current-week");
 const fullscreenbtn = document.getElementById("fullscreen-btn");
+
+let authortext = document.getElementById("author-text");
+
+
+
+// ------------ motivation panel ------------ //
+let length_quote = qoutes.length;
+
+let randqoute = Math.floor(Math.random()*length_quote);
+document.getElementById("quote-text").innerHTML=(qoutes[randqoute]);
+// authortext.textContent=authors[randqoute];
+
+
+
 
 
 
@@ -211,11 +236,11 @@ firesound.addEventListener('ended', function() {
 imgBg.addEventListener('change',function(){
   if (imgBg.value=='default-img'){
       document.body.style.backgroundColor='';
-      document.body.style.backgroundImage='url(../img/train-station.jpg)';
+      document.body.style.backgroundImage='url(../img/main-theme.jpeg)';
   }
-  else if (imgBg.value=='cozy-room'){
+  else if (imgBg.value=='car'){
       document.body.style.backgroundColor='';
-      document.body.style.backgroundImage='url(../img/cozy.jpeg)';
+      document.body.style.backgroundImage='url(../img/car.jpg)';
   }
   else if (imgBg.value=='fireplace'){
       document.body.style.backgroundColor='';
@@ -228,11 +253,31 @@ imgBg.addEventListener('change',function(){
 
   else if (imgBg.value=='paris'){
     document.body.style.backgroundColor='';
-    document.body.style.backgroundImage='url(../img/bed-coffe.jpg)';
+    document.body.style.backgroundImage='url(../img/paris.jpg)';
 }
-  else if (imgBg.value=='nature'){
+  else if (imgBg.value=='space'){
     document.body.style.backgroundColor='';
-    document.body.style.backgroundImage='url(../img/nature.jpeg)';
+    document.body.style.backgroundImage='url(../img/blackhole.jpg)';
+}
+
+else if (imgBg.value=='fantacy'){
+  document.body.style.backgroundColor='';
+  document.body.style.backgroundImage='url(../img/fantacy.jpg)';
+}
+
+else if (imgBg.value=='sky'){
+  document.body.style.backgroundColor='';
+  document.body.style.backgroundImage='url(../img/ballon.jpg)';
+}
+
+else if (imgBg.value=='wood'){
+  document.body.style.backgroundColor='';
+  document.body.style.backgroundImage='url(../img/abstract.jpg)';
+}
+
+else if (imgBg.value=='autumn'){
+  document.body.style.backgroundColor='';
+  document.body.style.backgroundImage='url(../img/autumn.jpg)';
 }
 
 });

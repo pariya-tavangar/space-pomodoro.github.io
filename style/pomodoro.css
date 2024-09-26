@@ -41,7 +41,7 @@ a {text-decoration: none;}
 
 html,body {
   height: 100%;
-  background-image: url('../img/warm-bg.jpeg');
+  background-image: url('../img/main-theme.jpeg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -58,7 +58,7 @@ html,body {
   font-size:100px;
   color:var(--second-site);
   font-weight:700;
-  text-shadow:2px 1px #000000;
+  text-shadow:4px 3px #000000;
 }
 
 #menu-btn{
@@ -227,7 +227,7 @@ hr.hrcolor{
   border-color: rgba(0, 0, 0, 0);
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0);
-  transition: 0.3s;
+  transition: 0.5s;
   outline: none;
 }
 
@@ -235,7 +235,7 @@ hr.hrcolor{
   background-color: #847d74;
   outline: none;
   border-color: rgba(0, 0, 0, 0);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .menu-button:focus{
@@ -244,7 +244,7 @@ hr.hrcolor{
   border-color: #000000;
   background-color: #966933;
   border-color: rgba(0, 0, 0, 0);
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 p.menu-btn-title{
@@ -270,6 +270,11 @@ p.menu-btn-title{
     background-color: #ffffff5d;
     border-radius: 10px;
     margin: 40px;
+    transition: 0.5s;
+  }
+
+  .fullscreen-div:hover{
+    background-color: #faefe1;
   }
 
 
@@ -281,7 +286,11 @@ p.menu-btn-title{
   border-radius: 10px;
   margin: 20px;
   padding-top: 5px;
-  
+  transition: 0.5s;
+}
+
+#sound-menu:hover{
+  background-color: #faefe1;transition: 0.5s;
 }
 
 
@@ -296,6 +305,20 @@ p.menu-btn-title{
 #music-btn:hover{
 background-color: #f1e6d6;
 }
+
+
+#motivator{
+  position: fixed;
+  right: 0;
+  top: 45%;
+  width: 280px;
+  background-color: #faefe178;
+  border-radius: 10px;
+  margin: 20px;
+  padding-top: 5px;
+  transition: 0.5s;
+}
+
 
 
 input[type="range"] {
