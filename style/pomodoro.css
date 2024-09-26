@@ -13,7 +13,6 @@
 }
 
 
-
 .bg-dark{
   background-color: rgb(33, 33, 33)!important;
 }
@@ -70,18 +69,13 @@ html,body {
   border-radius: 100px;
   position: absolute;
   width: 80px;
-  top: 25%;
+  top: 35%;
   margin-left: 30px;
   background-color: #faefe18f;
+  transition: 0.5s;
 }
 
 #menu-btn:hover{
-  justify-content: center;
-  border-radius: 100px;
-  position: absolute;
-  width: 80px;
-  top: 25%;
-  margin-left: 30px;
   background-color: #faefe1;
 }
 
@@ -93,22 +87,20 @@ html,body {
   vertical-align: middle;
   border-color:#c6b4a0;
   border-style: solid;
-  padding: 5px;
+  padding: 7px;
+  margin: 5px;
   border-radius: 8px;
   background-color: var(--second-site);
   transition: 0.5s;
 }
 
 #btn-controls:hover{
-  font-size: 14px;
   background-color: var(--null-shade-site);
   color: var(--second-site);
-  border-style: solid;
   transition: 0.5s;
 }
 
 #btn-controls:focus{
-  font-size: 14px;
   color: var(--second-site);
   background-color: rgba(251, 195, 99, 0.587);
 }
@@ -237,17 +229,12 @@ hr.hrcolor{
 
 .menu-button:hover{
   background-color: #847d74;
-  outline: none;
-  border-color: rgba(0, 0, 0, 0);
   transition: 0.5s;
 }
 
 .menu-button:focus{
-  border-style: solid;
-  outline: none;
-  border-color: #000000;
   background-color: #966933;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #000000;
   transition: 0.5s;
 }
 
@@ -362,6 +349,19 @@ input[type="range"]::-webkit-slider-thumb {
   /*  slider progress trick  */
   box-shadow: -407px 0 0 400px rgb(0, 0, 0);
 }
+
+
+.pomo-logo{
+  position: fixed;
+  left: 3%;
+  top: 5%;
+}
+
+.pomo-logo-img{
+  width: 400px;
+}
+
+
 
 /*---------mobile device---------*/
 @media screen and (max-width:700px){
