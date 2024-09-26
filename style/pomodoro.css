@@ -69,8 +69,8 @@ html,body {
   border-radius: 100px;
   position: absolute;
   width: 80px;
-  top: 35%;
-  margin-left: 30px;
+  top: 28%;
+  margin-left: 4%;
   background-color: #faefe18f;
   transition: 0.5s;
 }
@@ -257,10 +257,10 @@ p.menu-btn-title{
 .fullscreen-div{
     position: fixed;
     bottom: 0;
-    right: 0;
-    background-color: #ffffff5d;
+    margin-left: 4.5%;
+    margin-bottom: 7%;
+    background-color: #faefe18f;
     border-radius: 10px;
-    margin: 40px;
     transition: 0.5s;
   }
 
@@ -291,10 +291,6 @@ p.menu-btn-title{
   border: rgba(0, 0, 0, 0);
   outline: none;
   transition: 0.5s;
-}
-
-#music-btn:hover{
-background-color: #f1e6d6;
 }
 
 
@@ -353,7 +349,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .pomo-logo{
   position: fixed;
-  left: 3%;
+  left: 2%;
   top: 5%;
 }
 
