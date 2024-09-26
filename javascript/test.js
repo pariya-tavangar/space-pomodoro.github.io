@@ -3,6 +3,12 @@ const overlay = document.querySelector(".overlay");
 const openModalBtn = document.querySelector(".btn-open");
 const closeModalBtn = document.querySelector(".btn-close");
 
+
+
+document.getElementById("rand-p").innerHTML='hello';
+
+
+
 // close modal function
 const closeModal = function () {
   modal.classList.add("hidden");

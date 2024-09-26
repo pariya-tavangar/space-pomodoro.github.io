@@ -112,10 +112,11 @@
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
           "“Success is not final; failure is not fatal: It is the courage to continue that counts.”",
         "“Don’t let yesterday take up too much of today.”",
-        "“To know how much there is to know is the beginning of learning to live.”"
+        "“To know how much there is to know is the beginning of learning to live.”",
+        "“You don't have to be great to start, but you have to start to be great.”",
+        "“The best way to predict your future is to create it”"
         ];
-const authors = ["~ Mahatma Gandhi","~ Norman Vincent Peal","~ Winston Churchill","~ Will Rogers","~ Dorothy West"];
-
+const authors = ["Mahatma Gandhi","Norman Vincent Peal","Winston Churchill","Will Rogers","Dorothy West","Zig Ziglar","Abraham Lincoln"];
 
 
 
@@ -147,16 +148,14 @@ let currentTime = document.getElementById("current-time");
 let currentWeek = document.getElementById("current-week");
 const fullscreenbtn = document.getElementById("fullscreen-btn");
 
-let authortext = document.getElementById("author-text");
-
 
 
 // ------------ motivation panel ------------ //
 let length_quote = qoutes.length;
 
 let randqoute = Math.floor(Math.random()*length_quote);
-document.getElementById("quote-text").innerHTML=(qoutes[randqoute]);
-// authortext.textContent=authors[randqoute];
+document.getElementById("quote-text").innerHTML=qoutes[(randqoute)];
+document.getElementById("author-text").innerHTML="~ "+authors[(randqoute)];
 
 
 
