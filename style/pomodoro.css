@@ -69,6 +69,7 @@ html,body {
   border-radius: 100px;
   position: absolute;
   width: 80px;
+  outline: none;
   top: 28%;
   margin-left: 4%;
   background-color: #faefe18f;
@@ -89,6 +90,7 @@ html,body {
   border-style: solid;
   padding: 7px;
   margin: 5px;
+
   border-radius: 8px;
   background-color: var(--second-site);
   transition: 0.5s;
@@ -126,6 +128,7 @@ html,body {
   align-content: center;
   background-color: #faefe100;
   transition: 0.5s;
+    outline: none;
 }
 
 #home:hover{
@@ -230,12 +233,15 @@ hr.hrcolor{
 .menu-button:hover{
   background-color: #847d74;
   transition: 0.5s;
+  outline: none;
 }
 
 .menu-button:focus{
   background-color: #966933;
-  border-color: #000000;
+  border-color: #d6a568;
+  border-width: 2px;
   transition: 0.5s;
+  outline: none;
 }
 
 p.menu-btn-title{
