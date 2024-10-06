@@ -117,13 +117,41 @@ const secondsSpan = document.getElementById("seconds-span");
 
 window.onload = timer();
 function timer(){
-  var min = 25;
-  var sec = 0;
+  var sec = 10;
+  var min = 1;
   var timer = setInterval(function(){
-      minutesSpan.innerHTML='';
-      secondsSpan.innerHTML=sec;
-      if (sec > 0) {
-          clearInterval(timer);
+
+    sec-=1;
+
+    if (sec<10 && min<10){
+         secondsSpan.innerHTML='0'+sec;
+         minutesSpan.innerHTML='0'+min;
+       }
+    else if (sec<10 && min >10){
+      secondsSpan.innerHTML='0'+sec;
+      minutesSpan.innerHTML=min;
+    }
+
+    else {
+          minutesSpan.innerHTML=min;
+         secondsSpan.innerHTML=sec;
+    }
+    // if ( sec>10 && min<10){
+    //     minutesSpan.innerHTML='0'+min;
+    //     secondsSpan.innerHTML=sec;
+    //    }
+    //  else{
+    //     minutesSpan.innerHTML=min;
+    //     secondsSpan.innerHTML=sec;
+    //    }
+
+
+      if (sec <0 && min !=0 ){
+        min-=1;
+        sec=11;
+      }
+      else if(sec < 0 && min ==0){
+        clearInterval(timer);
       }
   }, 1000);
 }
