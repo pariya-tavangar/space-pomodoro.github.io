@@ -115,7 +115,30 @@
 const minutesSpan = document.getElementById("minutes-span");
 const secondsSpan = document.getElementById("seconds-span");
 
-const btnPush = document.getElementById("start-btn");
+window.onload = timer();
+function timer(){
+  var min = 25;
+  var sec = 0;
+  var timer = setInterval(function(){
+      minutesSpan.innerHTML='';
+      secondsSpan.innerHTML=sec;
+      if (sec > 0) {
+          clearInterval(timer);
+      }
+  }, 1000);
+}
+
+
+// mins = 25;
+// seconds = 60;
+
+
+
+// function updateTimer(){
+//   showit = seconds--;
+//   secondsSpan.innerHTML=showit;
+// }
+
 
 
 
