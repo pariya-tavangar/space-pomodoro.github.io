@@ -1,17 +1,17 @@
-// let focusButton = document.getElementById("focus");
-// let buttons = document.querySelectorAll(".btn");
-// let shortBreakButton = document.getElementById("shortbreak");
-// let longBreakButton = document.getElementById("longbreak");
-// let startBtn = document.getElementById("btn-start");
-// let reset = document.getElementById("btn-reset");
-// let pause = document.getElementById("btn-pause");
-// let time = document.getElementById("time");
-// let set;
-// let active = "focus";
-// let count = 59;
-// let paused = true;
-// let minCount = 24;
-// time.textContent = `${minCount + 1}:00`;
+let focusButton = document.getElementById(".focus");
+let buttons = document.querySelectorAll(".btn");
+let shortBreakButton = document.getElementById("shortbreak");
+let longBreakButton = document.getElementById("longbreak");
+let startBtn = document.getElementById(".start");
+let reset = document.getElementById(".reset");
+let pause = document.getElementById(".pause");
+// let time = document.getElementById(".numberr");
+let set;
+let active = "focus";
+let count = 59;
+let paused = true;
+let minCount = 24;
+document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
 
 // const appendZero = (value) => {
 //   value = value < 10 ? `0${value}` : value;
@@ -112,49 +112,50 @@
 
 //------- my version timer ----------
 
-const minutesSpan = document.getElementById("minutes-span");
-const secondsSpan = document.getElementById("seconds-span");
+// const minutesSpan = document.getElementById("minutes-span");
+// const secondsSpan = document.getElementById("seconds-span");
 
-window.onload = timer();
-function timer(){
-  var sec = 10;
-  var min = 1;
-  var timer = setInterval(function(){
+// window.onload = timer();
+// function timer(){
+//   var sec = 10;
+//   var min = 1;
+//   var timer = setInterval(function(){
 
-    sec-=1;
+//     sec--;
 
-    if (sec<10 && min<10){
-         secondsSpan.innerHTML='0'+sec;
-         minutesSpan.innerHTML='0'+min;
-       }
-    else if (sec<10 && min >10){
-      secondsSpan.innerHTML='0'+sec;
-      minutesSpan.innerHTML=min;
-    }
+//     if (sec<10 && min<10){
+//          secondsSpan.innerHTML='0'+sec;
+//          minutesSpan.innerHTML='0'+min;
+//        }
+//     else if (sec<10 && min >10){
+//       secondsSpan.innerHTML='0'+sec;
+//       minutesSpan.innerHTML=min;
+//     }
 
-    else {
-          minutesSpan.innerHTML=min;
-         secondsSpan.innerHTML=sec;
-    }
-    // if ( sec>10 && min<10){
-    //     minutesSpan.innerHTML='0'+min;
-    //     secondsSpan.innerHTML=sec;
-    //    }
-    //  else{
-    //     minutesSpan.innerHTML=min;
-    //     secondsSpan.innerHTML=sec;
-    //    }
+//     // else {
+//     //       minutesSpan.innerHTML=min;
+//     //      secondsSpan.innerHTML=sec;
+//     // }
+//     // if ( sec>10 && min<10){
+//     //     minutesSpan.innerHTML='0'+min;
+//     //     secondsSpan.innerHTML=sec;
+//     //    }
+//     //  else{
+//     //     minutesSpan.innerHTML=min;
+//     //     secondsSpan.innerHTML=sec;
+//     //    }
 
 
-      if (sec <0 && min !=0 ){
-        min-=1;
-        sec=11;
-      }
-      else if(sec < 0 && min ==0){
-        clearInterval(timer);
-      }
-  }, 1000);
-}
+//       if (sec <1 && min !=0 ){
+//         min-=1;
+//         sec=11;
+//       }
+
+//       else if(sec < 0 && min ==0){
+//         clearInterval(timer);
+//       }
+//   }, 1000);
+// }
 
 
 // mins = 25;

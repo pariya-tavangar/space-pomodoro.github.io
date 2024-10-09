@@ -57,7 +57,7 @@ html,body {
 #pomodoro-style {margin: 10px;}
 #menu-btn-img {width: 30px;}
 
-#number-style{
+.number-style{
   font-size:100px;
   color:var(--second-site);
   font-weight:700;
@@ -366,7 +366,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 /*---------mobile device---------*/
-@media screen and (max-width:700px){
+@media screen and (max-width:900px){
       
   #menu-btn-img {width: 20px;}
   #menu-btn{
@@ -375,7 +375,7 @@ input[type="range"]::-webkit-slider-thumb {
       position:relative;
       margin:0 auto;
       top: 15px;
-      width: 210px;
+      width: 280px;
       height: 60px;
       background-color: #faefe1bb;
       }
@@ -427,5 +427,8 @@ input[type="range"]::-webkit-slider-thumb {
       #home:hover{
         background-color: #00000049;
         transition: 0.5s;
+      }
+      .pomo-logo,#motivator,#sound-menu{
+        display: none;
       }
 }
