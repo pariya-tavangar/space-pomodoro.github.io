@@ -344,12 +344,22 @@ function displayClock(){
 
 
 // ---------------- timer ----------------
+function pauseAll(){
+  clearInterval(timer);
+  if (paused == false){clearInterval(timer)};
+  document.querySelector('.start').style.display='inline-block';
+  document.querySelector('.pause').style.display='none';
+  document.querySelector('.reset').style.display='none';
+}
+
+
 startBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='none';
   document.querySelector('.pause').style.display='inline-block';
   document.querySelector('.reset').style.display='inline-block';
 
+  paused = false;
   timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
     timer = setInterval(() => {
       seconds--;
@@ -376,6 +386,30 @@ pauseBtn.addEventListener("click",function(){
 
 });
 
+focusBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "focus";
+  minutes = 14;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
+shortBreakBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "short";
+  minutes = 4;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
+longBreakBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "long";
+  minutes = 24;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
 
 resetBtn.addEventListener("click",function(){
 
@@ -397,33 +431,4 @@ resetBtn.addEventListener("click",function(){
   }
   seconds = 59;
   timerHolder.textContent=` ${appendZero(minutes+1)}:00`;
-});
-
-
-function pauseAll(){
-  clearInterval(timer);
-  document.querySelector('.start').style.display='inline-block';
-  document.querySelector('.pause').style.display='none';
-  document.querySelector('.reset').style.display='none';
-}
-
-focusBtn.addEventListener("click",function(){
-  active = "focus";
-  minutes = 14;
-  seconds = 59;
-  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
-});
-
-shortBreakBtn.addEventListener("click",function(){
-  active = "short";
-  minutes = 4;
-  seconds = 59;
-  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
-});
-
-longBreakBtn.addEventListener("click",function(){
-  active = "long";
-  minutes = 24;
-  seconds = 59;
-  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
 });
