@@ -345,7 +345,6 @@ function displayClock(){
 
 // ---------------- timer ----------------
 function pauseAll(){
-  clearInterval(timer);
   if (paused == false){clearInterval(timer)};
   document.querySelector('.start').style.display='inline-block';
   document.querySelector('.pause').style.display='none';
