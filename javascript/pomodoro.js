@@ -19,10 +19,10 @@ let currentWeek = document.getElementById("current-week");
 const fullscreenbtn = document.getElementById("fullscreen-btn");
 
 
-let focusButton = document.getElementById(".focus");
-let buttons = document.querySelectorAll(".btn");
-let shortBreakButton = document.getElementById("shortbreak");
-let longBreakButton = document.getElementById("longbreak");
+let focusBtn = document.querySelector(".focus");
+// let buttons = document.querySelectorAll(".btn");
+let shortBreakBtn = document.querySelector(".short-break");
+let longBreakBtn = document.querySelector(".long-break");
 let startBtn = document.querySelector(".start");
 let resetBtn = document.querySelector(".reset");
 let pauseBtn = document.querySelector(".pause");
@@ -33,6 +33,8 @@ let seconds = 59;
 let paused = true;
 let minutes = 14;
 timerHolder.textContent =`${minutes+1}:00`;
+const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+
 
 document.querySelector('.pause').style.display='none';
 document.querySelector('.reset').style.display='none';
@@ -342,12 +344,21 @@ function displayClock(){
 
 
 // ---------------- timer ----------------
+function pauseAll(){
+  if (paused == false){clearInterval(timer)};
+  document.querySelector('.start').style.display='inline-block';
+  document.querySelector('.pause').style.display='none';
+  document.querySelector('.reset').style.display='none';
+}
+
+
 startBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='none';
   document.querySelector('.pause').style.display='inline-block';
   document.querySelector('.reset').style.display='inline-block';
 
+  paused = false;
   timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
     timer = setInterval(() => {
       seconds--;
@@ -364,7 +375,6 @@ startBtn.addEventListener("click",function(){
 });
 
 
-
 pauseBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='inline-block';
@@ -375,13 +385,49 @@ pauseBtn.addEventListener("click",function(){
 
 });
 
+focusBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "focus";
+  minutes = 14;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
+shortBreakBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "short";
+  minutes = 4;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
+longBreakBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "long";
+  minutes = 24;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
 
 resetBtn.addEventListener("click",function(){
+
   document.querySelector('.start').style.display='inline-block';
   document.querySelector('.pause').style.display='none';
   document.querySelector('.reset').style.display='none';
-  clearInterval(timer);
-  minutes=14;
-  seconds=59;
+
+  pauseAll();
+  switch(active){
+    case "focus":
+      minutes = 14;
+      break;
+    case "short":
+      minutes = 4;
+      break;
+    case "long":
+      minutes = 24;
+      break;
+  }
+  seconds = 59;
   timerHolder.textContent=` ${appendZero(minutes+1)}:00`;
 });
