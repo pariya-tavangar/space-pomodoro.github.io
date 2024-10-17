@@ -33,13 +33,13 @@ let paused = true;
 let minCount = 24;
 document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
 
-// const appendZero = (value) => {
-//   value = value < 10 ? `0${value}` : value;
-//   return value;
-// };
+const appendZero = (value) => {
+  value = value < 10 ? `0${value}` : value;
+  return value;
+};
 
 
-// reset.addEventListener(
+// resetBtn.addEventListener(
 //   "click",
 //   (resetTime = () => {
 //     pauseTimer();
@@ -94,7 +94,7 @@ document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
 //   time.textContent = `${minCount + 1}:00`;
 // });
 
-// pause.addEventListener(
+// pauseBtn.addEventListener(
 //   "click",
 //   (pauseTimer = () => {
 //     paused = true;
@@ -106,10 +106,10 @@ document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
 // );
 
 // startBtn.addEventListener("click", () => {
-//   reset.classList.add("show");
-//   pause.classList.add("show");
-//   startBtn.classList.add("hide");
-//   startBtn.classList.remove("show");
+//     resetBtn.classList.add("show");
+//     pauseBtn.classList.add("show");
+//     startBtn.classList.add("hide");
+//     startBtn.classList.remove("show");
 //   if (paused) {
 //     paused = false;
 //     time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
@@ -129,64 +129,6 @@ document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
 // });
 
 
-
-//------- my version timer ----------
-
-// const minutesSpan = document.getElementById("minutes-span");
-// const secondsSpan = document.getElementById("seconds-span");
-
-// window.onload = timer();
-// function timer(){
-//   var sec = 10;
-//   var min = 1;
-//   var timer = setInterval(function(){
-
-//     sec--;
-
-//     if (sec<10 && min<10){
-//          secondsSpan.innerHTML='0'+sec;
-//          minutesSpan.innerHTML='0'+min;
-//        }
-//     else if (sec<10 && min >10){
-//       secondsSpan.innerHTML='0'+sec;
-//       minutesSpan.innerHTML=min;
-//     }
-
-//     // else {
-//     //       minutesSpan.innerHTML=min;
-//     //      secondsSpan.innerHTML=sec;
-//     // }
-//     // if ( sec>10 && min<10){
-//     //     minutesSpan.innerHTML='0'+min;
-//     //     secondsSpan.innerHTML=sec;
-//     //    }
-//     //  else{
-//     //     minutesSpan.innerHTML=min;
-//     //     secondsSpan.innerHTML=sec;
-//     //    }
-
-
-//       if (sec <1 && min !=0 ){
-//         min-=1;
-//         sec=11;
-//       }
-
-//       else if(sec < 0 && min ==0){
-//         clearInterval(timer);
-//       }
-//   }, 1000);
-// }
-
-
-// mins = 25;
-// seconds = 60;
-
-
-
-// function updateTimer(){
-//   showit = seconds--;
-//   secondsSpan.innerHTML=showit;
-// }
 
 
 
@@ -395,5 +337,17 @@ function displayClock(){
 
 // ---------------- timer ----------------
 startBtn.addEventListener("click",function(){
-  document.getElementById("timer-holder").textContent =`${minCount+1}:01`;
+  document.getElementById("timer-holder").textContent =`${appendZero(minCount)}:${appendZero(count)}`;
+    timer = setInterval(() => {
+      count--;
+      document.getElementById("timer-holder").textContent =`${appendZero(minCount)}:${appendZero(count)}`;
+        if(count == 0){
+          if(minCount != 0){
+            minCount--;
+            count = 60;
+          } else {
+            clearInterval(set);
+          }
+        }
+    }, 1000);
 });
