@@ -26,12 +26,13 @@ let longBreakButton = document.getElementById("longbreak");
 let startBtn = document.querySelector(".start");
 let resetBtn = document.querySelector(".reset");
 let pauseBtn = document.querySelector(".pause");
+let timerHolder = document.getElementById("timer-holder");
 let set;
 let active = "focus";
 let count = 59;
 let paused = true;
-let minCount = 1;
-document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
+let minCount = 0;
+timerHolder.textContent =`${minCount+1}:00`;
 
 const appendZero = (value) => {
   value = value < 10 ? `0${value}` : value;
@@ -338,20 +339,17 @@ function displayClock(){
 
 // ---------------- timer ----------------
 startBtn.addEventListener("click",function(){
-  document.getElementById("timer-holder").textContent =`${appendZero(minCount)}:${appendZero(count)}`;
+
+  timerHolder.textContent =`${appendZero(minCount)}:${appendZero(count)}`;
     timer = setInterval(() => {
       count--;
-      document.getElementById("timer-holder").textContent =`${appendZero(minCount)}:${appendZero(count)}`;
+      timerHolder.textContent =`${appendZero(minCount)}:${appendZero(count)}`;
         if(count == 0){
           if(minCount != 0){
             minCount--;
             count = 60;
           } else {
-            clearInterval(timer)
-            minCount=24;
-            count=0;
-            document.getElementById("timer-holder").textContent =`${appendZero(minCount+1)}:${appendZero(count)}`;
-            // document.getElementById("timer-holder").textContent =`${appendZero(minCount)}:${appendZero(count)}`;
+            clearInterval(timer);
           }
         }
     }, 1000);
