@@ -136,6 +136,9 @@ const appendZero = (value) => {
 // });
 
 
+
+
+
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
           "“Success is not final; failure is not fatal: It is the courage to continue that secondss.”",
         "“Don’t let yesterday take up too much of today.”",
@@ -341,12 +344,21 @@ function displayClock(){
 
 
 // ---------------- timer ----------------
+function pauseAll(){
+  if (paused == false){clearInterval(timer)};
+  document.querySelector('.start').style.display='inline-block';
+  document.querySelector('.pause').style.display='none';
+  document.querySelector('.reset').style.display='none';
+}
+
+
 startBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='none';
   document.querySelector('.pause').style.display='inline-block';
   document.querySelector('.reset').style.display='inline-block';
 
+  paused = false;
   timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
     timer = setInterval(() => {
       seconds--;
@@ -372,6 +384,31 @@ pauseBtn.addEventListener("click",function(){
   clearInterval(timer);
 
 });
+
+focusBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "focus";
+  minutes = 14;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
+shortBreakBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "short";
+  minutes = 4;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
+longBreakBtn.addEventListener("click",function(){
+  pauseAll();
+  active = "long";
+  minutes = 24;
+  seconds = 59;
+  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+});
+
 
 resetBtn.addEventListener("click",function(){
 
