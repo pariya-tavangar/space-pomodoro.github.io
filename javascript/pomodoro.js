@@ -29,10 +29,14 @@ let pauseBtn = document.querySelector(".pause");
 let timerHolder = document.getElementById("timer-holder");
 let set;
 let active = "focus";
-let count = 59;
+let seconds = 59;
 let paused = true;
-let minCount = 0;
-timerHolder.textContent =`${minCount+1}:00`;
+let minutes = 14;
+timerHolder.textContent =`${minutes+1}:00`;
+
+document.querySelector('.pause').style.display='none';
+document.querySelector('.reset').style.display='none';
+
 
 const appendZero = (value) => {
   value = value < 10 ? `0${value}` : value;
@@ -46,17 +50,17 @@ const appendZero = (value) => {
 //     pauseTimer();
 //     switch (active) {
 //       case "long":
-//         minCount = 14;
+//         minutes = 14;
 //         break;
 //       case "short":
-//         minCount = 4;
+//         minutes = 4;
 //         break;
 //       default:
-//         minCount = 24;
+//         minutes = 24;
 //         break;
 //     }
-//     count = 59;
-//     time.textContent = `${minCount + 1}:00`;
+//     seconds = 59;
+//     time.textContent = `${minutes + 1}:00`;
 //   })
 // );
 
@@ -70,9 +74,9 @@ const appendZero = (value) => {
 //   removeFocus();
 //   focusButton.classList.add("btn-focus");
 //   pauseTimer();
-//   minCount = 24;
-//   count = 59;
-//   time.textContent = `${minCount + 1}:00`;
+//   minutes = 24;
+//   seconds = 59;
+//   time.textContent = `${minutes + 1}:00`;
 // });
 
 // shortBreakButton.addEventListener("click", () => {
@@ -80,9 +84,9 @@ const appendZero = (value) => {
 //   removeFocus();
 //   shortBreakButton.classList.add("btn-focus");
 //   pauseTimer();
-//   minCount = 4;
-//   count = 59;
-//   time.textContent = `${appendZero(minCount + 1)}:00`;
+//   minutes = 4;
+//   seconds = 59;
+//   time.textContent = `${appendZero(minutes + 1)}:00`;
 // });
 
 // longBreakButton.addEventListener("click", () => {
@@ -90,9 +94,9 @@ const appendZero = (value) => {
 //   removeFocus();
 //   longBreakButton.classList.add("btn-focus");
 //   pauseTimer();
-//   minCount = 14;
-//   count = 59;
-//   time.textContent = `${minCount + 1}:00`;
+//   minutes = 14;
+//   seconds = 59;
+//   time.textContent = `${minutes + 1}:00`;
 // });
 
 // pauseBtn.addEventListener(
@@ -113,14 +117,14 @@ const appendZero = (value) => {
 //     startBtn.classList.remove("show");
 //   if (paused) {
 //     paused = false;
-//     time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
+//     time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
 //     set = setInterval(() => {
-//       count--;
-//       time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
-//       if (count == 0) {
-//         if (minCount != 0) {
-//           minCount--;
-//           count = 60;
+//       seconds--;
+//       time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
+//       if (seconds == 0) {
+//         if (minutes != 0) {
+//           minutes--;
+//           seconds = 60;
 //         } else {
 //           clearInterval(set);
 //         }
@@ -134,7 +138,7 @@ const appendZero = (value) => {
 
 
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
-          "“Success is not final; failure is not fatal: It is the courage to continue that counts.”",
+          "“Success is not final; failure is not fatal: It is the courage to continue that secondss.”",
         "“Don’t let yesterday take up too much of today.”",
         "“To know how much there is to know is the beginning of learning to live.”",
         "“You don't have to be great to start, but you have to start to be great.”",
@@ -340,14 +344,18 @@ function displayClock(){
 // ---------------- timer ----------------
 startBtn.addEventListener("click",function(){
 
-  timerHolder.textContent =`${appendZero(minCount)}:${appendZero(count)}`;
+  document.querySelector('.start').style.display='none';
+  document.querySelector('.pause').style.display='inline-block';
+  document.querySelector('.reset').style.display='inline-block';
+
+  timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
     timer = setInterval(() => {
-      count--;
-      timerHolder.textContent =`${appendZero(minCount)}:${appendZero(count)}`;
-        if(count == 0){
-          if(minCount != 0){
-            minCount--;
-            count = 60;
+      seconds--;
+      timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
+        if(seconds == 0){
+          if(minutes != 0){
+            minutes--;
+            seconds = 60;
           } else {
             clearInterval(timer);
           }
@@ -357,16 +365,23 @@ startBtn.addEventListener("click",function(){
 
 
 
+pauseBtn.addEventListener("click",function(){
+
+  document.querySelector('.start').style.display='inline-block';
+  document.querySelector('.pause').style.display='none';
+  document.querySelector('.reset').style.display='none';
+
+  clearInterval(timer);
+
+});
 
 
-  //       count--;
-  //       time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
-  //       if (count == 0) {
-  //         if (minCount != 0) {
-  //           minCount--;
-  //           count = 60;
-  //         } else {
-  //           clearInterval(set);
-  //         }
-  //       }
-  //     }, 1000);
+resetBtn.addEventListener("click",function(){
+  document.querySelector('.start').style.display='inline-block';
+  document.querySelector('.pause').style.display='none';
+  document.querySelector('.reset').style.display='none';
+  clearInterval(timer);
+  minutes=14;
+  seconds=59;
+  timerHolder.textContent=` ${appendZero(minutes+1)}:00`;
+});
