@@ -30,7 +30,7 @@ let set;
 let active = "focus";
 let count = 59;
 let paused = true;
-let minCount = 24;
+let minCount = 1;
 document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
 
 const appendZero = (value) => {
@@ -335,6 +335,7 @@ function displayClock(){
 
 
 
+
 // ---------------- timer ----------------
 startBtn.addEventListener("click",function(){
   document.getElementById("timer-holder").textContent =`${appendZero(minCount)}:${appendZero(count)}`;
@@ -346,8 +347,28 @@ startBtn.addEventListener("click",function(){
             minCount--;
             count = 60;
           } else {
-            clearInterval(set);
+            clearInterval(timer)
+            minCount=24;
+            count=0;
+            document.getElementById("timer-holder").textContent =`${appendZero(minCount+1)}:${appendZero(count)}`;
+            // document.getElementById("timer-holder").textContent =`${appendZero(minCount)}:${appendZero(count)}`;
           }
         }
     }, 1000);
 });
+
+
+
+
+
+  //       count--;
+  //       time.textContent = `${appendZero(minCount)}:${appendZero(count)}`;
+  //       if (count == 0) {
+  //         if (minCount != 0) {
+  //           minCount--;
+  //           count = 60;
+  //         } else {
+  //           clearInterval(set);
+  //         }
+  //       }
+  //     }, 1000);
