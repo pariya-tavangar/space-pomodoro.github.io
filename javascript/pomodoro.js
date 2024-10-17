@@ -134,9 +134,6 @@ const appendZero = (value) => {
 // });
 
 
-
-
-
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
           "“Success is not final; failure is not fatal: It is the courage to continue that secondss.”",
         "“Don’t let yesterday take up too much of today.”",
@@ -363,8 +360,6 @@ startBtn.addEventListener("click",function(){
     }, 1000);
 });
 
-
-
 pauseBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='inline-block';
@@ -375,7 +370,6 @@ pauseBtn.addEventListener("click",function(){
 
 });
 
-
 resetBtn.addEventListener("click",function(){
   document.querySelector('.start').style.display='inline-block';
   document.querySelector('.pause').style.display='none';
@@ -385,3 +379,5 @@ resetBtn.addEventListener("click",function(){
   seconds=59;
   timerHolder.textContent=` ${appendZero(minutes+1)}:00`;
 });
+
+
