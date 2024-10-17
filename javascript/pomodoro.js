@@ -1,11 +1,31 @@
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector(".btn-open");
+const closeModalBtn = document.querySelector(".btn-close");
+var timerpanel = document.getElementById("timer-panel");
+var themepanel = document.getElementById("theme-panel");
+const hidebtn = document.getElementById("hide-btn")
+let colorPicker = document.querySelector('#color-picker');
+let imgBg = document.querySelector("#img-list");
+let colorBg = document.querySelector('#color-list');
+const rainbtn = document.querySelector(".rain-btn");
+const firebtn = document.querySelector(".fire-btn");
+const rainsound = new Audio("../audio/rain-01.mp3");
+const firesound = new Audio("../audio/campfire-1.mp3");
+let rainvol = document.getElementById("rain-vol");
+let firevol = document.getElementById("fire-vol");
+let currentTime = document.getElementById("current-time");
+let currentWeek = document.getElementById("current-week");
+const fullscreenbtn = document.getElementById("fullscreen-btn");
+
+
 let focusButton = document.getElementById(".focus");
 let buttons = document.querySelectorAll(".btn");
 let shortBreakButton = document.getElementById("shortbreak");
 let longBreakButton = document.getElementById("longbreak");
-let startBtn = document.getElementById(".start");
-let reset = document.getElementById(".reset");
-let pause = document.getElementById(".pause");
-// let time = document.getElementById(".numberr");
+let startBtn = document.querySelector(".start");
+let resetBtn = document.querySelector(".reset");
+let pauseBtn = document.querySelector(".pause");
 let set;
 let active = "focus";
 let count = 59;
@@ -170,7 +190,6 @@ document.getElementById("timer-holder").textContent =`${minCount+1}:00`;
 
 
 
-
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
           "“Success is not final; failure is not fatal: It is the courage to continue that counts.”",
         "“Don’t let yesterday take up too much of today.”",
@@ -186,26 +205,6 @@ const monthsOfYear = [
 const daysOfweek = [
   "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
 
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const openModalBtn = document.querySelector(".btn-open");
-const closeModalBtn = document.querySelector(".btn-close");
-var timerpanel = document.getElementById("timer-panel");
-var themepanel = document.getElementById("theme-panel");
-const hidebtn = document.getElementById("hide-btn")
-let colorPicker = document.querySelector('#color-picker');
-let imgBg = document.querySelector("#img-list");
-let colorBg = document.querySelector('#color-list');
-const rainbtn = document.querySelector(".rain-btn");
-const firebtn = document.querySelector(".fire-btn");
-const rainsound = new Audio("../audio/rain-01.mp3");
-const firesound = new Audio("../audio/campfire-1.mp3");
-let rainvol = document.getElementById("rain-vol");
-let firevol = document.getElementById("fire-vol");
-let currentTime = document.getElementById("current-time");
-let currentWeek = document.getElementById("current-week");
-const fullscreenbtn = document.getElementById("fullscreen-btn");
-
 
 
 // ------------ motivation panel ------------ //
@@ -214,8 +213,6 @@ let length_quote = qoutes.length;
 let randqoute = Math.floor(Math.random()*length_quote);
 document.getElementById("quote-text").innerHTML=qoutes[(randqoute)];
 document.getElementById("author-text").innerHTML="~ "+authors[(randqoute)];
-
-
 
 
 
@@ -231,7 +228,6 @@ fullscreenbtn.addEventListener('click',function(){
     document.body.requestFullscreen();
   }
 });
-
 
 
 
@@ -264,15 +260,15 @@ rainbtn.addEventListener('click',function(){
   });
 
 
-  firebtn.addEventListener('click',function(){
-    if (firesound.paused||firesound.ended){
+firebtn.addEventListener('click',function(){
+  if (firesound.paused||firesound.ended){
     document.getElementById("fire-img").src="../img/icons8-pause-50.png";
     firesound.play();}
-    else{
+  else{
       document.getElementById("fire-img").src="../img/icons8-play-50.png";
       firesound.pause();
-    }
-  });
+  }
+});
 
 
 //looping rainsound
@@ -389,9 +385,15 @@ function displayClock(){
   var today = (displayday%7-1);
   var displaymonth = ctime.getMonth();
   var displayday = ctime.getDate();
-  // var displayyear = ctime.getFullYear();
+  var displayyear = ctime.getFullYear();
   currentTime.textContent=displaytime;
-  currentWeek.textContent=daysOfweek[today]+' | '+monthsOfYear[displaymonth]+' '+displayday;
+  currentWeek.textContent=daysOfweek[today]+' | '+monthsOfYear[displaymonth]+' '+displayday+', '+displayyear;
   setTimeout(displayClock, 1000); }
 // ---------------- clock ----------------
 
+
+
+// ---------------- timer ----------------
+startBtn.addEventListener("click",function(){
+  document.getElementById("timer-holder").textContent =`${minCount+1}:01`;
+});
