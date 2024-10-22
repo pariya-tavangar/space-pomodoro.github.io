@@ -20,7 +20,6 @@ const fullscreenbtn = document.getElementById("fullscreen-btn");
 
 
 let focusBtn = document.querySelector(".focus");
-// let buttons = document.querySelectorAll(".btn");
 let shortBreakBtn = document.querySelector(".short-break");
 let longBreakBtn = document.querySelector(".long-break");
 let startBtn = document.querySelector(".start");
@@ -33,7 +32,6 @@ let seconds = 59;
 let paused = true;
 let minutes = 14;
 timerHolder.textContent =`${minutes+1}:00`;
-const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
 
 
 document.querySelector('.pause').style.display='none';
@@ -134,9 +132,6 @@ const appendZero = (value) => {
 //     }, 1000);
 //   }
 // });
-
-
-
 
 
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
@@ -351,7 +346,6 @@ function pauseAll(){
   document.querySelector('.reset').style.display='none';
 }
 
-
 startBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='none';
@@ -373,7 +367,6 @@ startBtn.addEventListener("click",function(){
         }
     }, 1000);
 });
-
 
 pauseBtn.addEventListener("click",function(){
 
@@ -409,7 +402,6 @@ longBreakBtn.addEventListener("click",function(){
   timerHolder.textContent=`${appendZero(minutes+1)}:00`;
 });
 
-
 resetBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='inline-block';
@@ -430,4 +422,9 @@ resetBtn.addEventListener("click",function(){
   }
   seconds = 59;
   timerHolder.textContent=` ${appendZero(minutes+1)}:00`;
+});
+
+
+focusBtn.addEventListener('click', () => {
+  focusBtn.style.backgroundColor=black;
 });
