@@ -26,13 +26,13 @@ let startBtn = document.querySelector(".start");
 let resetBtn = document.querySelector(".reset");
 let pauseBtn = document.querySelector(".pause");
 let timerHolder = document.getElementById("timer-holder");
+let pomo_set = document.getElementById("typeNumber-pomodoro");
 let set;
 let active = "focus";
 let seconds = 59;
 let paused = true;
-let minutes = 14;
-timerHolder.textContent =`${minutes+1}:00`;
-
+let minutes = pomo_set.value-1;
+timerHolder.textContent =`${pomo_set.value}:00`;
 
 document.querySelector('.pause').style.display='none';
 document.querySelector('.reset').style.display='none';
@@ -381,9 +381,9 @@ pauseBtn.addEventListener("click",function(){
 focusBtn.addEventListener("click",function(){
   pauseAll();
   active = "focus";
-  minutes = 14;
+  minutes = pomo_set.value-1;
   seconds = 59;
-  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+  timerHolder.textContent =`${pomo_set.value}:00`;
 });
 
 shortBreakBtn.addEventListener("click",function(){
@@ -425,6 +425,7 @@ resetBtn.addEventListener("click",function(){
 });
 
 
-focusBtn.addEventListener('click', () => {
-  focusBtn.style.backgroundColor=black;
+pomo_set.addEventListener("change",function(){
+  minutes = pomo_set.value-1;
+  timerHolder.textContent =`${appendZero(pomo_set.value)}:00`;
 });
