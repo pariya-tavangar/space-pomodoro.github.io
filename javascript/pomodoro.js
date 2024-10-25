@@ -20,21 +20,22 @@ const fullscreenbtn = document.getElementById("fullscreen-btn");
 
 
 let focusBtn = document.querySelector(".focus");
-// let buttons = document.querySelectorAll(".btn");
 let shortBreakBtn = document.querySelector(".short-break");
 let longBreakBtn = document.querySelector(".long-break");
 let startBtn = document.querySelector(".start");
 let resetBtn = document.querySelector(".reset");
 let pauseBtn = document.querySelector(".pause");
 let timerHolder = document.getElementById("timer-holder");
+let pomo_set = document.getElementById("typeNumber-fs");
+let short_m = document.getElementById("typeNumber-sb");
+let long_m = document.getElementById("typeNumber-lb");
 let set;
 let active = "focus";
 let seconds = 59;
 let paused = true;
-let minutes = 14;
-timerHolder.textContent =`${minutes+1}:00`;
-const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
-
+let minutes = pomo_set.value-1;
+// let short_minutes = short_m.value-1;
+timerHolder.textContent =`${pomo_set.value}:00`;
 
 document.querySelector('.pause').style.display='none';
 document.querySelector('.reset').style.display='none';
@@ -134,9 +135,6 @@ const appendZero = (value) => {
 //     }, 1000);
 //   }
 // });
-
-
-
 
 
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
@@ -351,7 +349,6 @@ function pauseAll(){
   document.querySelector('.reset').style.display='none';
 }
 
-
 startBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='none';
@@ -374,7 +371,6 @@ startBtn.addEventListener("click",function(){
     }, 1000);
 });
 
-
 pauseBtn.addEventListener("click",function(){
 
   document.querySelector('.start').style.display='inline-block';
@@ -388,27 +384,26 @@ pauseBtn.addEventListener("click",function(){
 focusBtn.addEventListener("click",function(){
   pauseAll();
   active = "focus";
-  minutes = 14;
+  minutes = pomo_set.value-1;
   seconds = 59;
-  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+  timerHolder.textContent =`${pomo_set.value}:00`;
 });
 
 shortBreakBtn.addEventListener("click",function(){
   pauseAll();
   active = "short";
-  minutes = 4;
+  minutes = short_m.value-1;
   seconds = 59;
-  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+  timerHolder.textContent=`${appendZero(short_m.value)}:00`;
 });
 
 longBreakBtn.addEventListener("click",function(){
   pauseAll();
   active = "long";
-  minutes = 24;
+  minutes = long_m.value-1;
   seconds = 59;
-  timerHolder.textContent=`${appendZero(minutes+1)}:00`;
+  timerHolder.textContent=`${appendZero(long_m.value)}:00`;
 });
-
 
 resetBtn.addEventListener("click",function(){
 
@@ -419,15 +414,32 @@ resetBtn.addEventListener("click",function(){
   pauseAll();
   switch(active){
     case "focus":
-      minutes = 14;
+      minutes = pomo_set.value-1;
       break;
     case "short":
-      minutes = 4;
+      minutes = short_m.value-1;
       break;
     case "long":
-      minutes = 24;
+      minutes = long_m.value-1;
       break;
   }
   seconds = 59;
   timerHolder.textContent=` ${appendZero(minutes+1)}:00`;
+});
+
+pomo_set.addEventListener("change",function(){
+  minutes = pomo_set.value-1;
+  timerHolder.textContent =`${appendZero(pomo_set.value)}:00`;
+});
+
+short_m.addEventListener("change",function(){
+
+  minutes = short_m.value-1;
+  timerHolder.textContent =`${appendZero(short_m.value)}:00`;
+});
+
+long_m.addEventListener("change",function(){
+
+  minutes = long_m.value-1;
+  timerHolder.textContent =`${appendZero(long_m.value)}:00`;
 });
