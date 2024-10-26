@@ -81,7 +81,7 @@ html,body {
   background-color: #faefe1;
 }
 
-/* #btn-controls{
+#btn-controls{
   color: black;
   text-decoration: none;
   font-size: 14px;
@@ -95,9 +95,9 @@ html,body {
   border-radius: 8px;
   background-color: var(--second-site);
   transition: 0.5s;
-} */
+}
 
-/* #btn-controls:hover{
+#btn-controls:hover{
   background-color: var(--null-shade-site);
   color: var(--second-site);
   transition: 0.5s;
@@ -106,7 +106,7 @@ html,body {
 #btn-controls:focus{
   color: var(--second-site);
   background-color: rgba(0, 0, 0, 0.587);
-} */
+}
 
 
 #center-timer{
@@ -346,7 +346,7 @@ input[type="range"]::-webkit-slider-thumb {
   /* creating a custom design */
   height: 15px;
   width: 15px;
-  background-color: #ffffff;
+  background-color: #f1e6d6;
   border-radius: 50%;
   border: 2px solid rgb(0, 0, 0);
   /*  slider progress trick  */
@@ -355,7 +355,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 .pomo-logo{
-  position: relative;
+  position: fixed;
   left: 2%;
   top: 5%;
 }
@@ -367,26 +367,27 @@ input[type="range"]::-webkit-slider-thumb {
 
 .timer-mode{
   list-style-type: none;
-  margin: 25px 0 0 0;
+  margin: auto;
   padding: 0;
 }
 
 .timer-mode li {
-  float: left;
-  margin: 0 5px 0 0;
-  width: 100px;
-  height: 40px;
+  display: inline-block;
+  width: 110px;
+  height: 45px;
   position: relative;
+  margin: 5px;
+  font-size: 14px;
 }
 
 .timer-mode label,
 .timer-mode input {
-  display: inline-block;
   position:absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  border-radius: 5px;
 }
 
 .timer-mode input[type="radio"] {
@@ -396,33 +397,20 @@ input[type="range"]::-webkit-slider-thumb {
 
 .timer-mode input[type="radio"]:checked+label,
 .Checked+label {
-  background: yellow;
+
+background-color: #f1e6d6;
+color: black;
+transition: 0.5s;
 }
 
 .timer-mode label {
   padding: 5px;
-  border: 1px solid #CCC;
+  border: 1px solid #f1e6d6;
   cursor: pointer;
   z-index: 90;
+  color: #f1e6d6;
 }
 
-.timer-mode label:hover {
-  background: #DDD;
-}
-
-
-
-
-display: inline-block;
-vertical-align: middle;
-border-color:#c6b4a0;
-border-style: solid;
-padding: 7px;
-margin: 5px;
-
-border-radius: 8px;
-background-color: var(--second-site);
-transition: 0.5s;
 
 
 
