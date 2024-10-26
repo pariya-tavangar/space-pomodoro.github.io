@@ -103,10 +103,10 @@ html,body {
   transition: 0.5s;
 }
 
-#btn-controls:focus{
+/* #btn-controls:focus{
   color: var(--second-site);
   background-color: rgba(251, 195, 99, 0.587);
-}
+} */
 
 
 #center-timer{
