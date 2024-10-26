@@ -46,6 +46,10 @@ const appendZero = (value) => {
   return value;
 };
 
+const appendHour = (value) => {
+  value = value>60 ? `${Math.floor(value/60)}:${appendZero(value%60)}` : value;
+  return value;
+}
 
 // resetBtn.addEventListener(
 //   "click",
@@ -137,6 +141,9 @@ const appendZero = (value) => {
 // });
 
 
+
+
+
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
           "“Success is not final; failure is not fatal: It is the courage to continue that secondss.”",
         "“Don’t let yesterday take up too much of today.”",
@@ -216,6 +223,7 @@ firebtn.addEventListener('click',function(){
       firesound.pause();
   }
 });
+
 
 
 //looping rainsound
@@ -356,12 +364,12 @@ startBtn.addEventListener("click",function(){
   document.querySelector('.reset').style.display='inline-block';
 
   paused = false;
-  timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
+  timerHolder.textContent =`${appendZero(appendHour(minutes))}:${appendZero(seconds)}`;
     timer = setInterval(() => {
       seconds--;
-      timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
+      timerHolder.textContent =`${appendZero(appendHour(minutes))}:${appendZero(seconds)}`;
         if(seconds == 0){
-          if(minutes != 0){
+          if(minutes != 0 ){
             minutes--;
             seconds = 60;
           } else {
@@ -386,7 +394,7 @@ focusBtn.addEventListener("click",function(){
   active = "focus";
   minutes = pomo_set.value-1;
   seconds = 59;
-  timerHolder.textContent =`${pomo_set.value}:00`;
+  timerHolder.textContent =`${appendZero(appendHour(pomo_set.value))}:00`;
 });
 
 shortBreakBtn.addEventListener("click",function(){
@@ -394,7 +402,7 @@ shortBreakBtn.addEventListener("click",function(){
   active = "short";
   minutes = short_m.value-1;
   seconds = 59;
-  timerHolder.textContent=`${appendZero(short_m.value)}:00`;
+  timerHolder.textContent=`${appendZero(appendHour(short_m.value))}:00`;
 });
 
 longBreakBtn.addEventListener("click",function(){
@@ -402,7 +410,7 @@ longBreakBtn.addEventListener("click",function(){
   active = "long";
   minutes = long_m.value-1;
   seconds = 59;
-  timerHolder.textContent=`${appendZero(long_m.value)}:00`;
+  timerHolder.textContent=`${appendZero(appendHour(long_m.value))}:00`;
 });
 
 resetBtn.addEventListener("click",function(){
@@ -424,22 +432,22 @@ resetBtn.addEventListener("click",function(){
       break;
   }
   seconds = 59;
-  timerHolder.textContent=` ${appendZero(minutes+1)}:00`;
+  timerHolder.textContent=` ${appendZero(appendHour(minutes+1))}:00`;
 });
 
 pomo_set.addEventListener("change",function(){
   minutes = pomo_set.value-1;
-  timerHolder.textContent =`${appendZero(pomo_set.value)}:00`;
+  timerHolder.textContent =`${appendZero(appendHour(pomo_set.value))}:00`;
 });
 
 short_m.addEventListener("change",function(){
 
   minutes = short_m.value-1;
-  timerHolder.textContent =`${appendZero(short_m.value)}:00`;
+  timerHolder.textContent =`${appendZero(appendHour(short_m.value))}:00`;
 });
 
 long_m.addEventListener("change",function(){
 
   minutes = long_m.value-1;
-  timerHolder.textContent =`${appendZero(long_m.value)}:00`;
+  timerHolder.textContent =`${appendZero(appendHour(long_m.value))}:00`;
 });
