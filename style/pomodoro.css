@@ -103,10 +103,10 @@ html,body {
   transition: 0.5s;
 }
 
-/* #btn-controls:focus{
+#btn-controls:focus{
   color: var(--second-site);
-  background-color: rgba(251, 195, 99, 0.587);
-} */
+  background-color: rgba(0, 0, 0, 0.587);
+}
 
 
 #center-timer{
@@ -346,7 +346,7 @@ input[type="range"]::-webkit-slider-thumb {
   /* creating a custom design */
   height: 15px;
   width: 15px;
-  background-color: #ffffff;
+  background-color: #f1e6d6;
   border-radius: 50%;
   border: 2px solid rgb(0, 0, 0);
   /*  slider progress trick  */
@@ -363,6 +363,54 @@ input[type="range"]::-webkit-slider-thumb {
 .pomo-logo-img{
   width: 400px;
 }
+
+
+.timer-mode{
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+.timer-mode li {
+  display: inline-block;
+  width: 110px;
+  height: 45px;
+  position: relative;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.timer-mode label,
+.timer-mode input {
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.timer-mode input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.timer-mode input[type="radio"]:checked+label,
+.Checked+label {
+
+background-color: #f1e6d6;
+color: black;
+transition: 0.5s;
+}
+
+.timer-mode label {
+  padding: 5px;
+  border: 1px solid #f1e6d6;
+  cursor: pointer;
+  z-index: 90;
+  color: #f1e6d6;
+}
+
 
 
 

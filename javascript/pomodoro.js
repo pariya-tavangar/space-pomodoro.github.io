@@ -51,95 +51,6 @@ const appendHour = (value) => {
   return value;
 }
 
-// resetBtn.addEventListener(
-//   "click",
-//   (resetTime = () => {
-//     pauseTimer();
-//     switch (active) {
-//       case "long":
-//         minutes = 14;
-//         break;
-//       case "short":
-//         minutes = 4;
-//         break;
-//       default:
-//         minutes = 24;
-//         break;
-//     }
-//     seconds = 59;
-//     time.textContent = `${minutes + 1}:00`;
-//   })
-// );
-
-// const removeFocus = () => {
-//   buttons.forEach((btn) => {
-//     btn.classList.remove("btn-focus");
-//   });
-// };
-
-// focusButton.addEventListener("click", () => {
-//   removeFocus();
-//   focusButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 24;
-//   seconds = 59;
-//   time.textContent = `${minutes + 1}:00`;
-// });
-
-// shortBreakButton.addEventListener("click", () => {
-//   active = "short";
-//   removeFocus();
-//   shortBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 4;
-//   seconds = 59;
-//   time.textContent = `${appendZero(minutes + 1)}:00`;
-// });
-
-// longBreakButton.addEventListener("click", () => {
-//   active = "long";
-//   removeFocus();
-//   longBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 14;
-//   seconds = 59;
-//   time.textContent = `${minutes + 1}:00`;
-// });
-
-// pauseBtn.addEventListener(
-//   "click",
-//   (pauseTimer = () => {
-//     paused = true;
-//     clearInterval(set);
-//     startBtn.classList.remove("hide");
-//     pause.classList.remove("show");
-//     reset.classList.remove("show");
-//   })
-// );
-
-// startBtn.addEventListener("click", () => {
-//     resetBtn.classList.add("show");
-//     pauseBtn.classList.add("show");
-//     startBtn.classList.add("hide");
-//     startBtn.classList.remove("show");
-//   if (paused) {
-//     paused = false;
-//     time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
-//     set = setInterval(() => {
-//       seconds--;
-//       time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
-//       if (seconds == 0) {
-//         if (minutes != 0) {
-//           minutes--;
-//           seconds = 60;
-//         } else {
-//           clearInterval(set);
-//         }
-//       }
-//     }, 1000);
-//   }
-// });
-
 
 const qoutes = ["“Learn as if you will live forever, live like you will die tomorrow.”","When you change your thoughts, remember to also change your world",
           "“Success is not final; failure is not fatal: It is the courage to continue that secondss.”",
@@ -167,8 +78,6 @@ document.getElementById("author-text").innerHTML="~ "+authors[(randqoute)];
 
 
 
-
-
 // ------------ fullscreen button ------------ //
 
 fullscreenbtn.addEventListener('click',function(){
@@ -179,7 +88,6 @@ fullscreenbtn.addEventListener('click',function(){
     document.body.requestFullscreen();
   }
 });
-
 
 
 // ------------ sound menu ------------ //
@@ -197,7 +105,6 @@ firevol.addEventListener('change',function(){
   var volumefire = document.getElementById("fire-vol").value;
   firesound.volume = volumefire/100;
 });
-
 
 
 rainbtn.addEventListener('click',function(){
