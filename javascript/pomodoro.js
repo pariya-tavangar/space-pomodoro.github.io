@@ -361,12 +361,12 @@ startBtn.addEventListener("click",function(){
   document.querySelector('.reset').style.display='inline-block';
 
   paused = false;
-  timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
+  timerHolder.textContent =`${appendZero(appendHour(minutes))}:${appendZero(seconds)}`;
     timer = setInterval(() => {
       seconds--;
-      timerHolder.textContent =`${appendZero(minutes)}:${appendZero(seconds)}`;
+      timerHolder.textContent =`${appendZero(appendHour(minutes))}:${appendZero(seconds)}`;
         if(seconds == 0){
-          if(minutes != 0){
+          if(minutes != 0 ){
             minutes--;
             seconds = 60;
           } else {
