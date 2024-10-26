@@ -20,9 +20,20 @@
     <div id="center-timer">
       <div class="row" id="pomodoro-style">
         <div class="col">
-          <a href="#" class="button focus" id="btn-controls" role="button">pomodoro</a>
-          <a href="#" class="button short-break" id="btn-controls" role="button">short break</a>
-          <a href="#" class="button long-break" id="btn-controls" role="button">long break</a>
+          <ul class="timer-mode">
+            <li>
+              <input class="" name ="mode" id="btn-controls" type="radio"/>
+              <label for="btn-controls">pomodoro</label>
+            </li>
+            <li>
+              <input class="" name ="mode" id="btn-controls" type="radio"/>
+              <label for="btn-controls">pomodoro</label>
+            </li>
+            <li>
+              <input class="" name ="mode" id="btn-controls" type="radio"/>
+              <label for="btn-controls">pomodoro</label>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -311,6 +322,12 @@
       document.getElementById('timer-panel').style.display='none';
       document.getElementById('theme-panel').style.display='block';
     }
+
+    btns = document.getElementById('.start');
+
+    btns.addEventListener('click',function(){
+      btns.style.backgroundColor='red';
+      });
 </script>
 <!-- </div> -->
 

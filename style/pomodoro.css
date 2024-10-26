@@ -81,7 +81,7 @@ html,body {
   background-color: #faefe1;
 }
 
-#btn-controls{
+/* #btn-controls{
   color: black;
   text-decoration: none;
   font-size: 14px;
@@ -95,17 +95,17 @@ html,body {
   border-radius: 8px;
   background-color: var(--second-site);
   transition: 0.5s;
-}
+} */
 
-#btn-controls:hover{
+/* #btn-controls:hover{
   background-color: var(--null-shade-site);
   color: var(--second-site);
   transition: 0.5s;
 }
 
-/* #btn-controls:focus{
+#btn-controls:focus{
   color: var(--second-site);
-  background-color: rgba(251, 195, 99, 0.587);
+  background-color: rgba(0, 0, 0, 0.587);
 } */
 
 
@@ -355,7 +355,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 .pomo-logo{
-  position: fixed;
+  position: relative;
   left: 2%;
   top: 5%;
 }
@@ -363,6 +363,66 @@ input[type="range"]::-webkit-slider-thumb {
 .pomo-logo-img{
   width: 400px;
 }
+
+
+.timer-mode{
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+}
+
+.timer-mode li {
+  float: left;
+  margin: 0 5px 0 0;
+  width: 100px;
+  height: 40px;
+  position: relative;
+}
+
+.timer-mode label,
+.timer-mode input {
+  display: inline-block;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.timer-mode input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.timer-mode input[type="radio"]:checked+label,
+.Checked+label {
+  background: yellow;
+}
+
+.timer-mode label {
+  padding: 5px;
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+}
+
+.timer-mode label:hover {
+  background: #DDD;
+}
+
+
+
+
+display: inline-block;
+vertical-align: middle;
+border-color:#c6b4a0;
+border-style: solid;
+padding: 7px;
+margin: 5px;
+
+border-radius: 8px;
+background-color: var(--second-site);
+transition: 0.5s;
 
 
 
