@@ -302,6 +302,7 @@ p.menu-btn-title{
 
 
 #motivator{
+  display: none;
   position: fixed;
   right: 0;
   top: 55%;
@@ -413,7 +414,10 @@ transition: 0.5s;
 }
 
 
-
+#spotify-panel{
+margin:20% 1.5% 0 0;
+float: right;
+}
 
 /*---------mobile device---------*/
 @media screen and (max-width:900px){
