@@ -73,7 +73,7 @@ html,body {
   outline: none;
   top: 28%;
   margin-left: 4%;
-  background-color: #faefe18f;
+  background-color: #f1e6d6cd;
   transition: 0.5s;
 }
 
@@ -112,7 +112,7 @@ html,body {
 #center-timer{
   display: inline;
   position:fixed;
-  top: 0;
+  top: 12%;
   bottom: 0;
   left: 0;
   right:0;
@@ -266,7 +266,7 @@ p.menu-btn-title{
     bottom: 0;
     margin-left: 5%;
     margin-bottom: 3%;
-    background-color: #faefe18f;
+    background-color: #f1e6d6cd;
     border-radius: 10px;
     transition: 0.5s;
   }
@@ -280,7 +280,7 @@ p.menu-btn-title{
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #faefe178;
+  background-color: #f1e6d6cd;
   border-radius: 10px;
   margin: 20px;
   padding-top: 5px;
@@ -302,21 +302,26 @@ p.menu-btn-title{
 
 
 #motivator{
-  display: none;
-  position: fixed;
-  right: 0;
-  top: 55%;
-  width: 280px;
-  background-color: #faefe178;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 10px;
+  display: inline;
+  position:fixed;
+  top: 12%;
+  left: 0;
+  right:0;
+  width: 420px;
+  margin: auto;
+  height: 130px;
+  padding: 15px;
+  border-radius: 50px;
+  background-color:#f1e6d6cd;
+  color: black;
+  font-size: 14px;
   transition: 0.5s;
 }
 
 
 #motivator:hover{
-  background-color: #f1e6d6;
+  background-color:#f1e6d6;
+
 }
 
 
@@ -486,3 +491,4 @@ float: right;
         display: none;
       }
 }
+
