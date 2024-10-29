@@ -65,7 +65,7 @@ const monthsOfYear = [
   "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
 
 const daysOfweek = [
-  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
+  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 
 
@@ -241,7 +241,7 @@ function displayClock(){
   var ctime = new Date();
   var displaytime = ctime.toLocaleTimeString();
   var displayday = ctime.getDate();
-  var today = (displayday%7-1);
+  var today = (displayday%7)+1;
   var displaymonth = ctime.getMonth();
   var displayday = ctime.getDate();
   var displayyear = ctime.getFullYear();
@@ -249,8 +249,6 @@ function displayClock(){
   currentWeek.textContent=daysOfweek[today]+' | '+monthsOfYear[displaymonth]+' '+displayday+', '+displayyear;
   setTimeout(displayClock, 1000); }
 // ---------------- clock ----------------
-
-
 
 
 // ---------------- timer ----------------
