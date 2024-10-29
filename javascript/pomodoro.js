@@ -8,10 +8,17 @@ const hidebtn = document.getElementById("hide-btn")
 let colorPicker = document.querySelector('#color-picker');
 let imgBg = document.querySelector("#img-list");
 let colorBg = document.querySelector('#color-list');
+
 const rainbtn = document.querySelector(".rain-btn");
 const firebtn = document.querySelector(".fire-btn");
-const rainsound = new Audio("../audio/rain-01.mp3");
-const firesound = new Audio("../audio/campfire-1.mp3");
+const rainsound = new Audio("../audio/noise/rain-01.mp3");
+const firesound = new Audio("../audio/noise/campfire-1.mp3");
+const alarm1 = new Audio("../audio/alert/alarm1.mp3");
+const alarm2 = new Audio("../audio/alert/alarm2.mp3");
+const alarm3 = new Audio("../audio/alert/alarm1.mp3");
+const alarm4 = new Audio("../audio/alert/alarm1.mp3");
+const alarm5 = new Audio("../audio/alert/alarm1.mp3");
+
 let rainvol = document.getElementById("rain-vol");
 let firevol = document.getElementById("fire-vol");
 let currentTime = document.getElementById("current-time");
@@ -281,6 +288,7 @@ startBtn.addEventListener("click",function(){
               shortBreakBtn.dispatchEvent(new Event('click'));
               document.querySelector(".short-break").checked = "true";
               startBtn.dispatchEvent(new Event('click'));
+              chill.play();
             }
             else if (active=="short"){
               longBreakBtn.dispatchEvent(new Event('click'));
