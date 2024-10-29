@@ -276,6 +276,21 @@ startBtn.addEventListener("click",function(){
             seconds = 60;
           } else {
             clearInterval(timer);
+
+            if (active=="focus"){
+              shortBreakBtn.dispatchEvent(new Event('click'));
+              document.querySelector(".short-break").checked = "true";
+              startBtn.dispatchEvent(new Event('click'));
+            }
+            else if (active=="short"){
+              longBreakBtn.dispatchEvent(new Event('click'));
+              document.querySelector(".long-break").checked = "true";
+              startBtn.dispatchEvent(new Event('click'));
+            }
+            else if (active=="long"){
+              focusBtn.dispatchEvent(new Event('click'));
+              document.querySelector(".focus").checked = "true";
+            }
           }
         }
     }, 1000);
