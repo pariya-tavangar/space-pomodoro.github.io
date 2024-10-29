@@ -20,9 +20,20 @@
     <div id="center-timer">
       <div class="row" id="pomodoro-style">
         <div class="col">
-          <a href="#" class="button focus" id="btn-controls" role="button">pomodoro</a>
-          <a href="#" class="button short-break" id="btn-controls" role="button">short break</a>
-          <a href="#" class="button long-break" id="btn-controls" role="button">long break</a>
+          <ul class="timer-mode">
+            <li>
+              <input class="focus" name ="mode" type="radio" checked/>
+              <label for="btn-controls">pomodoro</label>
+            </li>
+            <li>
+              <input class="short-break" name ="mode" type="radio"/>
+              <label for="btn-controls">short break</label>
+            </li>
+            <li>
+              <input class="long-break" name ="mode" type="radio"/>
+              <label for="btn-controls">long break</label>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -103,7 +114,9 @@
 
     <!--------- motivator --------->
       <div id="motivator">
-        <img src="../img/quote-sign.png" alt="">
+        <img style="background-color: #f1e6d6;
+        margin-bottom: 15px;
+        border-radius: 5px;" src="../img/quote-sign.png" alt="">
           <i><p id="quote-text"></p></i><br/>
           <p id="author-text"></p>
       </div>
@@ -198,7 +211,7 @@
                               <hr class="hrcolor">
                               <br/><br/>
           
-                              <div class="row" style="padding-bottom: 12%;">
+                              <div class="row" style="margin-bottom: 6%;">
                                 <div class="col">
                                   <h4 style="padding: 10px; font-size: 17px; color: white;">Choose Bg Color</h4>
                                   <input id="color-picker" type="color" class="form-control form-control-color" id="myColor" value="#CCCCCC" title="Choose a color">
@@ -224,13 +237,8 @@
           
                               <div class="row">
                                 <div class="col">
-                                  <h4 style="padding: 10px; font-size: 17px; color: white;">Random Theme Color</h4>
-                                  <button type="button" class="btn btn-dark">Generate</button>
-                                </div>
-          
-                                <div class="col">
                                   <h4 style="padding: 10px; font-size: 17px; color: white;">Set Theme to Default</h4>
-                                  <button type="button" class="btn btn-dark">Reset</button>
+                                  <button type="button" class="btn btn-dark" style="width: 150px;">Reset</button>
                                 </div>
                               </div>
                 
@@ -275,8 +283,9 @@
 <!--------- side menu buttons ---------->
 
 
-
-
+<!------------ spotify ------------------>
+<iframe id="spotify-panel" style="border-radius:12px;" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="270px" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<!------------ spotify ------------------>
 
 <!--------- footer --------->
 <!-- <section>
@@ -311,6 +320,12 @@
       document.getElementById('timer-panel').style.display='none';
       document.getElementById('theme-panel').style.display='block';
     }
+
+    btns = document.getElementById('.start');
+
+    btns.addEventListener('click',function(){
+      btns.style.backgroundColor='red';
+      });
 </script>
 <!-- </div> -->
 

@@ -51,95 +51,6 @@ const appendHour = (value) => {
   return value;
 }
 
-// resetBtn.addEventListener(
-//   "click",
-//   (resetTime = () => {
-//     pauseTimer();
-//     switch (active) {
-//       case "long":
-//         minutes = 14;
-//         break;
-//       case "short":
-//         minutes = 4;
-//         break;
-//       default:
-//         minutes = 24;
-//         break;
-//     }
-//     seconds = 59;
-//     time.textContent = `${minutes + 1}:00`;
-//   })
-// );
-
-// const removeFocus = () => {
-//   buttons.forEach((btn) => {
-//     btn.classList.remove("btn-focus");
-//   });
-// };
-
-// focusButton.addEventListener("click", () => {
-//   removeFocus();
-//   focusButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 24;
-//   seconds = 59;
-//   time.textContent = `${minutes + 1}:00`;
-// });
-
-// shortBreakButton.addEventListener("click", () => {
-//   active = "short";
-//   removeFocus();
-//   shortBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 4;
-//   seconds = 59;
-//   time.textContent = `${appendZero(minutes + 1)}:00`;
-// });
-
-// longBreakButton.addEventListener("click", () => {
-//   active = "long";
-//   removeFocus();
-//   longBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 14;
-//   seconds = 59;
-//   time.textContent = `${minutes + 1}:00`;
-// });
-
-// pauseBtn.addEventListener(
-//   "click",
-//   (pauseTimer = () => {
-//     paused = true;
-//     clearInterval(set);
-//     startBtn.classList.remove("hide");
-//     pause.classList.remove("show");
-//     reset.classList.remove("show");
-//   })
-// );
-
-// startBtn.addEventListener("click", () => {
-//     resetBtn.classList.add("show");
-//     pauseBtn.classList.add("show");
-//     startBtn.classList.add("hide");
-//     startBtn.classList.remove("show");
-//   if (paused) {
-//     paused = false;
-//     time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
-//     set = setInterval(() => {
-//       seconds--;
-//       time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
-//       if (seconds == 0) {
-//         if (minutes != 0) {
-//           minutes--;
-//           seconds = 60;
-//         } else {
-//           clearInterval(set);
-//         }
-//       }
-//     }, 1000);
-//   }
-// });
-
 
 
 
@@ -157,7 +68,7 @@ const monthsOfYear = [
   "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
 
 const daysOfweek = [
-  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
+  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 
 
@@ -167,8 +78,6 @@ let length_quote = qoutes.length;
 let randqoute = Math.floor(Math.random()*length_quote);
 document.getElementById("quote-text").innerHTML=qoutes[(randqoute)];
 document.getElementById("author-text").innerHTML="~ "+authors[(randqoute)];
-
-
 
 
 
@@ -182,7 +91,6 @@ fullscreenbtn.addEventListener('click',function(){
     document.body.requestFullscreen();
   }
 });
-
 
 
 // ------------ sound menu ------------ //
@@ -200,7 +108,6 @@ firevol.addEventListener('change',function(){
   var volumefire = document.getElementById("fire-vol").value;
   firesound.volume = volumefire/100;
 });
-
 
 
 rainbtn.addEventListener('click',function(){
@@ -337,7 +244,7 @@ function displayClock(){
   var ctime = new Date();
   var displaytime = ctime.toLocaleTimeString();
   var displayday = ctime.getDate();
-  var today = (displayday%7-1);
+  var today = (displayday%7)+1;
   var displaymonth = ctime.getMonth();
   var displayday = ctime.getDate();
   var displayyear = ctime.getFullYear();
@@ -345,8 +252,6 @@ function displayClock(){
   currentWeek.textContent=daysOfweek[today]+' | '+monthsOfYear[displaymonth]+' '+displayday+', '+displayyear;
   setTimeout(displayClock, 1000); }
 // ---------------- clock ----------------
-
-
 
 
 // ---------------- timer ----------------
