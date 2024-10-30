@@ -15,9 +15,9 @@ const rainsound = new Audio("../audio/noise/rain-01.mp3");
 const firesound = new Audio("../audio/noise/campfire-1.mp3");
 const alarm1 = new Audio("../audio/alert/alarm1.mp3");
 const alarm2 = new Audio("../audio/alert/alarm2.mp3");
-const alarm3 = new Audio("../audio/alert/alarm1.mp3");
-const alarm4 = new Audio("../audio/alert/alarm1.mp3");
-const alarm5 = new Audio("../audio/alert/alarm1.mp3");
+const alarm3 = new Audio("../audio/alert/alarm3.mp3");
+const alarm4 = new Audio("../audio/alert/alarm4.mp3");
+const alarm5 = new Audio("../audio/alert/alarm5.mp3");
 
 let rainvol = document.getElementById("rain-vol");
 let firevol = document.getElementById("fire-vol");
@@ -288,7 +288,7 @@ startBtn.addEventListener("click",function(){
               shortBreakBtn.dispatchEvent(new Event('click'));
               document.querySelector(".short-break").checked = "true";
               startBtn.dispatchEvent(new Event('click'));
-              chill.play();
+              alarm3.play();
             }
             else if (active=="short"){
               longBreakBtn.dispatchEvent(new Event('click'));
