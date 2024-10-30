@@ -8,10 +8,17 @@ const hidebtn = document.getElementById("hide-btn")
 let colorPicker = document.querySelector('#color-picker');
 let imgBg = document.querySelector("#img-list");
 let colorBg = document.querySelector('#color-list');
+
 const rainbtn = document.querySelector(".rain-btn");
 const firebtn = document.querySelector(".fire-btn");
-const rainsound = new Audio("../audio/rain-01.mp3");
-const firesound = new Audio("../audio/campfire-1.mp3");
+const rainsound = new Audio("../audio/noise/rain-01.mp3");
+const firesound = new Audio("../audio/noise/campfire-1.mp3");
+const alarm1 = new Audio("../audio/alert/alarm1.mp3");
+const alarm2 = new Audio("../audio/alert/alarm2.mp3");
+const alarm3 = new Audio("../audio/alert/alarm3.mp3");
+const alarm4 = new Audio("../audio/alert/alarm4.mp3");
+const alarm5 = new Audio("../audio/alert/alarm5.mp3");
+
 let rainvol = document.getElementById("rain-vol");
 let firevol = document.getElementById("fire-vol");
 let currentTime = document.getElementById("current-time");
@@ -51,95 +58,6 @@ const appendHour = (value) => {
   return value;
 }
 
-// resetBtn.addEventListener(
-//   "click",
-//   (resetTime = () => {
-//     pauseTimer();
-//     switch (active) {
-//       case "long":
-//         minutes = 14;
-//         break;
-//       case "short":
-//         minutes = 4;
-//         break;
-//       default:
-//         minutes = 24;
-//         break;
-//     }
-//     seconds = 59;
-//     time.textContent = `${minutes + 1}:00`;
-//   })
-// );
-
-// const removeFocus = () => {
-//   buttons.forEach((btn) => {
-//     btn.classList.remove("btn-focus");
-//   });
-// };
-
-// focusButton.addEventListener("click", () => {
-//   removeFocus();
-//   focusButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 24;
-//   seconds = 59;
-//   time.textContent = `${minutes + 1}:00`;
-// });
-
-// shortBreakButton.addEventListener("click", () => {
-//   active = "short";
-//   removeFocus();
-//   shortBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 4;
-//   seconds = 59;
-//   time.textContent = `${appendZero(minutes + 1)}:00`;
-// });
-
-// longBreakButton.addEventListener("click", () => {
-//   active = "long";
-//   removeFocus();
-//   longBreakButton.classList.add("btn-focus");
-//   pauseTimer();
-//   minutes = 14;
-//   seconds = 59;
-//   time.textContent = `${minutes + 1}:00`;
-// });
-
-// pauseBtn.addEventListener(
-//   "click",
-//   (pauseTimer = () => {
-//     paused = true;
-//     clearInterval(set);
-//     startBtn.classList.remove("hide");
-//     pause.classList.remove("show");
-//     reset.classList.remove("show");
-//   })
-// );
-
-// startBtn.addEventListener("click", () => {
-//     resetBtn.classList.add("show");
-//     pauseBtn.classList.add("show");
-//     startBtn.classList.add("hide");
-//     startBtn.classList.remove("show");
-//   if (paused) {
-//     paused = false;
-//     time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
-//     set = setInterval(() => {
-//       seconds--;
-//       time.textContent = `${appendZero(minutes)}:${appendZero(seconds)}`;
-//       if (seconds == 0) {
-//         if (minutes != 0) {
-//           minutes--;
-//           seconds = 60;
-//         } else {
-//           clearInterval(set);
-//         }
-//       }
-//     }, 1000);
-//   }
-// });
-
 
 
 
@@ -157,7 +75,7 @@ const monthsOfYear = [
   "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
 
 const daysOfweek = [
-  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","saturday"];
+  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 
 
@@ -167,8 +85,6 @@ let length_quote = qoutes.length;
 let randqoute = Math.floor(Math.random()*length_quote);
 document.getElementById("quote-text").innerHTML=qoutes[(randqoute)];
 document.getElementById("author-text").innerHTML="~ "+authors[(randqoute)];
-
-
 
 
 
@@ -182,7 +98,6 @@ fullscreenbtn.addEventListener('click',function(){
     document.body.requestFullscreen();
   }
 });
-
 
 
 // ------------ sound menu ------------ //
@@ -200,7 +115,6 @@ firevol.addEventListener('change',function(){
   var volumefire = document.getElementById("fire-vol").value;
   firesound.volume = volumefire/100;
 });
-
 
 
 rainbtn.addEventListener('click',function(){
@@ -337,7 +251,7 @@ function displayClock(){
   var ctime = new Date();
   var displaytime = ctime.toLocaleTimeString();
   var displayday = ctime.getDate();
-  var today = (displayday%7-1);
+  var today = (displayday%7)+1;
   var displaymonth = ctime.getMonth();
   var displayday = ctime.getDate();
   var displayyear = ctime.getFullYear();
@@ -345,8 +259,6 @@ function displayClock(){
   currentWeek.textContent=daysOfweek[today]+' | '+monthsOfYear[displaymonth]+' '+displayday+', '+displayyear;
   setTimeout(displayClock, 1000); }
 // ---------------- clock ----------------
-
-
 
 
 // ---------------- timer ----------------
@@ -374,6 +286,22 @@ startBtn.addEventListener("click",function(){
             seconds = 60;
           } else {
             clearInterval(timer);
+
+            if (active=="focus"){
+              shortBreakBtn.dispatchEvent(new Event('click'));
+              document.querySelector(".short-break").checked = "true";
+              startBtn.dispatchEvent(new Event('click'));
+              alarm3.play();
+            }
+            else if (active=="short"){
+              longBreakBtn.dispatchEvent(new Event('click'));
+              document.querySelector(".long-break").checked = "true";
+              startBtn.dispatchEvent(new Event('click'));
+            }
+            else if (active=="long"){
+              focusBtn.dispatchEvent(new Event('click'));
+              document.querySelector(".focus").checked = "true";
+            }
           }
         }
     }, 1000);

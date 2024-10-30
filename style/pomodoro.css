@@ -73,7 +73,7 @@ html,body {
   outline: none;
   top: 28%;
   margin-left: 4%;
-  background-color: #faefe18f;
+  background-color: #f1e6d6cd;
   transition: 0.5s;
 }
 
@@ -103,16 +103,16 @@ html,body {
   transition: 0.5s;
 }
 
-/* #btn-controls:focus{
+#btn-controls:focus{
   color: var(--second-site);
-  background-color: rgba(251, 195, 99, 0.587);
-} */
+  background-color: rgba(0, 0, 0, 0.587);
+}
 
 
 #center-timer{
   display: inline;
   position:fixed;
-  top: 0;
+  top: 6%;
   bottom: 0;
   left: 0;
   right:0;
@@ -266,7 +266,7 @@ p.menu-btn-title{
     bottom: 0;
     margin-left: 5%;
     margin-bottom: 3%;
-    background-color: #faefe18f;
+    background-color: #f1e6d6cd;
     border-radius: 10px;
     transition: 0.5s;
   }
@@ -280,7 +280,7 @@ p.menu-btn-title{
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #faefe178;
+  background-color: #f1e6d6cd;
   border-radius: 10px;
   margin: 20px;
   padding-top: 5px;
@@ -302,20 +302,28 @@ p.menu-btn-title{
 
 
 #motivator{
-  position: fixed;
-  right: 0;
-  top: 55%;
-  width: 280px;
-  background-color: #faefe178;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 10px;
+  display: inline;
+  position:fixed;
+  top: 8%;
+  left: 0;
+  right:0;
+  width: 420px;
+  margin: auto;
+  height: auto;
+  padding: 15px;
+  border-radius: 50px;
+  background-color:#f1e6d600;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
   transition: 0.5s;
 }
 
 
+
 #motivator:hover{
-  background-color: #f1e6d6;
+  background-color:#f1e6d6;
+  color: black;
+
 }
 
 
@@ -346,7 +354,7 @@ input[type="range"]::-webkit-slider-thumb {
   /* creating a custom design */
   height: 15px;
   width: 15px;
-  background-color: #ffffff;
+  background-color: #f1e6d6;
   border-radius: 50%;
   border: 2px solid rgb(0, 0, 0);
   /*  slider progress trick  */
@@ -362,6 +370,60 @@ input[type="range"]::-webkit-slider-thumb {
 
 .pomo-logo-img{
   width: 400px;
+}
+
+
+.timer-mode{
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+.timer-mode li {
+  display: inline-block;
+  width: 110px;
+  height: 44px;
+  position: relative;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.timer-mode label,
+.timer-mode input {
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: #00000076;
+}
+
+.timer-mode input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.timer-mode input[type="radio"]:checked+label,
+.Checked+label {
+
+background-color: #f1e6d6;
+color: black;
+transition: 0.5s;
+}
+
+.timer-mode label {
+  padding: 5px;
+  border: 1px solid #f1e6d6;
+  cursor: pointer;
+  z-index: 90;
+  color: #f1e6d6;
+}
+
+
+#spotify-panel{
+margin:20% 1.5% 0 0;
+float: right;
 }
 
 
@@ -433,3 +495,4 @@ input[type="range"]::-webkit-slider-thumb {
         display: none;
       }
 }
+
