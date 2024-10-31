@@ -8,6 +8,7 @@ const hidebtn = document.getElementById("hide-btn")
 let colorPicker = document.querySelector('#color-picker');
 let imgBg = document.querySelector("#img-list");
 let colorBg = document.querySelector('#color-list');
+let soundList = document.getElementById("sound-list"); 
 
 const rainbtn = document.querySelector(".rain-btn");
 const firebtn = document.querySelector(".fire-btn");
@@ -18,6 +19,8 @@ const alarm2 = new Audio("../audio/alert/alarm2.mp3");
 const alarm3 = new Audio("../audio/alert/alarm3.mp3");
 const alarm4 = new Audio("../audio/alert/alarm4.mp3");
 const alarm5 = new Audio("../audio/alert/alarm5.mp3");
+let notifRange = document.getElementById("notif-vol");
+
 
 let rainvol = document.getElementById("rain-vol");
 let firevol = document.getElementById("fire-vol");
@@ -41,6 +44,7 @@ let active = "focus";
 let seconds = 59;
 let paused = true;
 let minutes = pomo_set.value-1;
+let notifSound = alarm1;
 // let short_minutes = short_m.value-1;
 timerHolder.textContent =`${pomo_set.value}:00`;
 
@@ -104,6 +108,7 @@ fullscreenbtn.addEventListener('click',function(){
 
 rainsound.volume=0.30;
 firesound.volume=0.10;
+notifSound.volume=0.30;
 
 rainvol.addEventListener('change',function(){
   var volumerain = document.getElementById("rain-vol").value;
@@ -209,7 +214,28 @@ colorPicker.addEventListener('change',function(){
   document.body.style.backgroundColor=colorPicker.value;}
 );
 
+soundList.addEventListener('change',function(){
+if(soundList.value=="alarm-1"){
+  notifSound = alarm1;
+}
+else if(soundList.value=="alarm-2"){
+  notifSound = alarm2;
+}
+else if(soundList.value=="alarm-3"){
+  notifSound = alarm3;
+}
+else if(soundList.value=="alarm-4"){
+  notifSound = alarm4;
+}
+else if(soundList.value=="alarm-5"){
+  notifSound = alarm5;
+}
+});
 
+notifRange.addEventListener('change',function(){
+  notifSound.volume = notifRange.value/100;
+  notifSound.play();
+});
 
 document.addEventListener("click",hidebtn)
 {
@@ -291,16 +317,18 @@ startBtn.addEventListener("click",function(){
               shortBreakBtn.dispatchEvent(new Event('click'));
               document.querySelector(".short-break").checked = "true";
               startBtn.dispatchEvent(new Event('click'));
-              alarm3.play();
+              notifSound.play();
             }
             else if (active=="short"){
               longBreakBtn.dispatchEvent(new Event('click'));
               document.querySelector(".long-break").checked = "true";
               startBtn.dispatchEvent(new Event('click'));
+              notifSound.play();
             }
             else if (active=="long"){
               focusBtn.dispatchEvent(new Event('click'));
               document.querySelector(".focus").checked = "true";
+              alarm2.play();
             }
           }
         }
