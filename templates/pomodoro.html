@@ -67,7 +67,7 @@
               <img src="../img/rain (2).png" style="width: 27px;" alt="">
             </div>
             <div class="col">
-              <input type="range" id="rain-vol" name="vol" min="0" max="100">
+              <input class="music-range" type="range" id="rain-vol" name="vol" min="0" max="100">
             </div>
             <div class="col">
               <button id="music-btn" class="rain-btn"><img id="rain-img" src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -79,7 +79,7 @@
             <img src="../img/fire.png" style="width: 27px;" alt="">
           </div>
           <div class="col">
-            <input type="range" id="fire-vol" name="vol" min="0" max="50" value="10.0">
+            <input class="music-range" type="range" id="fire-vol" name="vol" min="0" max="50" value="10.0">
           </div>
           <div class="col">
             <button id="music-btn" class="fire-btn"><img id="fire-img" src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -90,7 +90,7 @@
         <img src="../img/icons8-bird-30.png" style="width: 27px;" alt="">
         </div>
         <div class="col">
-          <input type="range" id="vol" name="vol" min="0" max="50" value="10.0">
+          <input class="music-range" type="range" id="vol" name="vol" min="0" max="50" value="10.0">
         </div>
         <div class="col">
           <button id="music-btn"><img src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -101,7 +101,7 @@
         <img src="../img/icons8-river-50.png" style="width: 27px;" alt="">
       </div>
       <div class="col">
-        <input type="range" id="vol" name="vol" min="0" max="50" value="10.0">
+        <input class="music-range" type="range" id="vol" name="vol" min="0" max="50" value="10.0">
       </div>
       <div class="col">
         <button id="music-btn"><img src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -264,6 +264,11 @@
                             <option value="alarm-5">alarm 5</option>
                         </select>   
                       </div>
+                      <div class="col">
+                        <h4 style="padding: 10px; font-size: 17px; color: white;">Alarm Volume</h4>
+                        <input class="notif-range" type="range" id="notif-vol" value="10.5" name="vol" min="0" max="100">
+                      </div>
+
                     </div>
       
           </div>
