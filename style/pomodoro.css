@@ -145,6 +145,12 @@ html,body {
   align-content: center;
 }
 
+#timer-panel,#theme-panel,#sound-panel{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
 
 hr.hrcolor{
   border-top: 3px solid rgba(78, 78, 78, 0.541);

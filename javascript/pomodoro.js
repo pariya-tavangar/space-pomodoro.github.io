@@ -58,7 +58,7 @@ const appendZero = (value) => {
 };
 
 const appendHour = (value) => {
-  value = value>60 ? `${Math.floor(value/60)}:${appendZero(value%60)}` : value;
+  value = value>=60 ? `${Math.floor(value/60)}:${appendZero(value%60)}` : value;
   return value;
 }
 
@@ -177,14 +177,13 @@ imgBg.addEventListener('change',function(){
       document.body.style.backgroundColor='';
       document.body.style.backgroundImage='url(../img/mountain.jpg)';
   }
-
   else if (imgBg.value=='paris'){
     document.body.style.backgroundColor='';
-    document.body.style.backgroundImage='url(../img/paris.jpg)';
+    document.body.style.backgroundImage='url(../img/paris.jpeg)';
 }
-  else if (imgBg.value=='space'){
+  else if (imgBg.value=='bed'){
     document.body.style.backgroundColor='';
-    document.body.style.backgroundImage='url(../img/blackhole.jpg)';
+    document.body.style.backgroundImage='url(../img/bed-coffe.jpg)';
 }
 
 else if (imgBg.value=='fantacy'){
@@ -197,14 +196,14 @@ else if (imgBg.value=='sky'){
   document.body.style.backgroundImage='url(../img/ballon.jpg)';
 }
 
-else if (imgBg.value=='wood'){
+else if (imgBg.value=='train'){
   document.body.style.backgroundColor='';
-  document.body.style.backgroundImage='url(../img/abstract.jpg)';
+  document.body.style.backgroundImage='url(../img/train-station.jpg)';
 }
 
-else if (imgBg.value=='autumn'){
+else if (imgBg.value=='nature'){
   document.body.style.backgroundColor='';
-  document.body.style.backgroundImage='url(../img/autumn.jpg)';
+  document.body.style.backgroundImage='url(../img/nature.jpg)';
 }
 
 });
