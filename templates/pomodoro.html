@@ -67,7 +67,7 @@
               <img src="../img/rain (2).png" style="width: 27px;" alt="">
             </div>
             <div class="col">
-              <input type="range" id="rain-vol" name="vol" min="0" max="100">
+              <input class="music-range" type="range" id="rain-vol" name="vol" min="0" max="100">
             </div>
             <div class="col">
               <button id="music-btn" class="rain-btn"><img id="rain-img" src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -79,7 +79,7 @@
             <img src="../img/fire.png" style="width: 27px;" alt="">
           </div>
           <div class="col">
-            <input type="range" id="fire-vol" name="vol" min="0" max="50" value="10.0">
+            <input class="music-range" type="range" id="fire-vol" name="vol" min="0" max="50" value="10.0">
           </div>
           <div class="col">
             <button id="music-btn" class="fire-btn"><img id="fire-img" src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -90,7 +90,7 @@
         <img src="../img/icons8-bird-30.png" style="width: 27px;" alt="">
         </div>
         <div class="col">
-          <input type="range" id="vol" name="vol" min="0" max="50" value="10.0">
+          <input class="music-range" type="range" id="vol" name="vol" min="0" max="50" value="10.0">
         </div>
         <div class="col">
           <button id="music-btn"><img src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -101,7 +101,7 @@
         <img src="../img/icons8-river-50.png" style="width: 27px;" alt="">
       </div>
       <div class="col">
-        <input type="range" id="vol" name="vol" min="0" max="50" value="10.0">
+        <input class="music-range" type="range" id="vol" name="vol" min="0" max="50" value="10.0">
       </div>
       <div class="col">
         <button id="music-btn"><img src="../img/icons8-play-50.png" style="width: 25px;" alt=""></button>
@@ -151,7 +151,7 @@
 
 
 
-                    <button class="menu-button" id="menu-timer" onclick="hideme()">
+                    <button class="menu-button" id="menu-timer" onclick="show_sound_panel()">
                       <div class="col"><img class="menu-btn-img" src="../img/sound.png" alt=""></div>
                       <p class="menu-btn-title">Sound</p>
                     </button>
@@ -244,6 +244,35 @@
                 
                     </div>
                   <!----- THEME (end) ------->
+
+                  <!----- SOUND -------->
+                  <div id="sound-panel">
+                    <h1 style="color: rgba(78, 78, 78, 0.541);font-weight:800; font-size: 50px;">Sound</h1>
+                    <hr class="hrcolor">
+                    <br/><br/>
+
+                    <div class="row" style="margin-bottom: 6%;">
+
+                      <div class="col">
+                        <h4 style="padding: 10px; font-size: 17px; color: white;">Alarm Sound</h4>
+                        <select class="custom-select bg-dark text-white" id="sound-list">
+                            <option selected>select notification</option>
+                            <option value="alarm-1">alarm 1</option>
+                            <option value="alarm-2">alarm 2</option>
+                            <option value="alarm-3">alarm 3</option>
+                            <option value="alarm-4">alarm 4</option>
+                            <option value="alarm-5">alarm 5</option>
+                        </select>   
+                      </div>
+                      <div class="col">
+                        <h4 style="padding: 10px; font-size: 17px; color: white;">Alarm Volume</h4>
+                        <input class="notif-range" type="range" id="notif-vol" value="10.5" name="vol" min="0" max="100">
+                      </div>
+
+                    </div>
+      
+          </div>
+                  <!----- SOUND (end) ------->
               </div>
 
 
@@ -308,17 +337,27 @@
 
 
     document.getElementById('theme-panel').style.display='none';
+    document.getElementById('sound-panel').style.display='none';
 
 
     function show_timer_panel(){
         document.getElementById('timer-panel').style.display='block';
         document.getElementById('theme-panel').style.display='none';
+        document.getElementById('sound-panel').style.display='none';
 
     }
 
     function show_theme_panel(){
       document.getElementById('timer-panel').style.display='none';
       document.getElementById('theme-panel').style.display='block';
+      document.getElementById('sound-panel').style.display='none';
+    }
+
+    function show_sound_panel(){
+      document.getElementById('timer-panel').style.display='none';
+      document.getElementById('theme-panel').style.display='none';
+      document.getElementById('sound-panel').style.display='block';
+
     }
 
     btns = document.getElementById('.start');
