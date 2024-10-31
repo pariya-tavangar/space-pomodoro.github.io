@@ -428,7 +428,7 @@ transition: 0.5s;
 
 
 #spotify-panel{
-margin:20% 1.5% 0 0;
+margin:330px 18px 0 0;
 float: right;
 }
 
@@ -469,28 +469,21 @@ float: right;
 }
 
 /*---------mobile device---------*/
-@media screen and (max-width:900px){
+@media screen and (max-width:1000px){
       
   #menu-btn-img {width: 20px;}
   #menu-btn{
       justify-content: center;
-      border-radius: 100px;
+      border-radius: 30px;
       position:relative;
       margin:0 auto;
       top: 15px;
-      width: 280px;
-      height: 60px;
+      width: 220px;
+      height: 62px;
       background-color: #faefe1bb;
       }
     
       #menu-btn:hover{
-        justify-content: center;
-        border-radius: 100px;
-        position:relative;
-        margin:0 auto;
-        top: 15px;
-        width: 210px;
-        height: 60px;
         background-color: #faefe1;
       }
 
@@ -534,5 +527,38 @@ float: right;
       .pomo-logo,#motivator,#sound-menu{
         display: none;
       }
+
+      #spotify-panel{
+        display: none;
+      }
 }
 
+@media screen and (max-width:1020px){
+
+  .modal{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 0.4rem;
+  width: 88%;
+  margin-left: 6%;
+  /* padding: 1.5rem; */
+  min-height: 250px;
+  position:relative;
+  z-index: 2;
+  top:15%;
+  background-color: rgba(0, 0, 0, 0.874);
+  border: 1px solid #ddd;
+  border-radius: 15px; }
+
+  .menu-button{
+    width: 100px;
+  }
+
+  .menu-btn-img{
+    width: 24px;
+  }
+  p.menu-btn-title{
+    font-size: 13px;
+  }
+}
