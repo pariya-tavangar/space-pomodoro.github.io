@@ -19,6 +19,8 @@ const alarm2 = new Audio("../audio/alert/alarm2.mp3");
 const alarm3 = new Audio("../audio/alert/alarm3.mp3");
 const alarm4 = new Audio("../audio/alert/alarm4.mp3");
 const alarm5 = new Audio("../audio/alert/alarm5.mp3");
+let notifVol = document.getElementById("notif-vol");
+
 
 let rainvol = document.getElementById("rain-vol");
 let firevol = document.getElementById("fire-vol");
@@ -103,6 +105,7 @@ fullscreenbtn.addEventListener('click',function(){
 
 rainsound.volume=0.30;
 firesound.volume=0.10;
+notifSound.volume=0.30;
 
 rainvol.addEventListener('change',function(){
   var volumerain = document.getElementById("rain-vol").value;
@@ -224,6 +227,11 @@ else if(soundList.value=="alarm-4"){
 else if(soundList.value=="alarm-5"){
   notifSound = alarm5;
 }
+});
+
+notifVol.addEventListener('change',function(){
+  notifSound.volume = notifVol/100;
+  notifSound.play();
 });
 
 document.addEventListener("click",hidebtn)
