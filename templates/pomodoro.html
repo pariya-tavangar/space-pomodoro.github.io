@@ -124,7 +124,7 @@
 
 
   <!------------ modal--------------->
-    <section class="modal hidden">
+    <section class="modal hidden" id="modal-container">
       <div class="flex">
         <a href="#" class="btn-close" role="button"><img class="exit-btn-img" src="../img/closebtn.png" alt=""></a>
       </div>
@@ -133,7 +133,7 @@
         <!----- BUTTONS ------>
         <div class="container">
           <div class="row">
-              <div class="col-2" id="" style="background-color: #5b57507d; border-radius: 10px;">
+              <div class="col-2" id="" style="background-color: #5b575000; border-radius: 10px;">
 
 
                     <button type="button" id="time-btn" class="menu-button" onclick="show_timer_panel()">
@@ -185,14 +185,14 @@
                       </div>
 
                       <div class="col" style="padding-bottom: 12%;">
-                        <h4 style="padding: 5px; font-size: 17px; color: white;">Short Break</h4>
+                        <h4 style="padding: 5px; font-size: 17px; color: white;">Short-Break</h4>
                         <div data-mdb-input-init class="form-outline">
                           <input value="5" type="number" id="typeNumber-sb" class="form-control"/>
                       </div>
                       </div>
 
                       <div class="col" style="padding-bottom: 12%;">
-                        <h4 style="padding: 5px; font-size: 17px; color: white;">Long Break</h4>
+                        <h4 style="padding: 5px; font-size: 17px; color: white;">Long-Break</h4>
                         <div data-mdb-input-init class="form-outline">
                           <input value="25" type="number" id="typeNumber-lb" class="form-control"/>
                       </div>
@@ -255,8 +255,7 @@
                       <div class="col">
                         <h4 style="padding: 10px; font-size: 17px; color: white;">Alarm Sound</h4>
                         <select class="custom-select bg-dark text-white" id="sound-list">
-                            <option selected>select notification</option>
-                            <option value="alarm-1">alarm 1</option>
+                            <option selected value="alarm-1">alarm 1</option>
                             <option value="alarm-2">alarm 2</option>
                             <option value="alarm-3">alarm 3</option>
                             <option value="alarm-4">alarm 4</option>
@@ -297,7 +296,6 @@
  <!--------- side menu buttons ---------->
     <div id="menu-btn">
       <a href="#" class="button"><div class="btn btn-open" id="home"><img id="menu-btn-img" src="../img//icons8-setting-64.png" alt="settings"></div></a>
-      <a href="#" class="button"><div id="home"><img id="menu-btn-img" src="../img/avatar-large.png" alt="pomodoro"></div></a>
       <a href="#" class="button"><div id="home"><img id="menu-btn-img" src="../img/icons8-site-96.png" alt="pomodoro"></div></a>
       <a href="#" class="button"><div id="home"><img id="menu-btn-img" src="../img/icons8-info-96.png" alt=""></div></a>
     </div>
@@ -312,7 +310,7 @@
 
 
 <!------------ spotify ------------------>
-<iframe id="spotify-panel" style="border-radius:12px;" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="270px" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe id="spotify-panel" style="border-radius:12px;" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator&theme=0" width="240px" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <!------------ spotify ------------------>
 
 <!--------- footer --------->
