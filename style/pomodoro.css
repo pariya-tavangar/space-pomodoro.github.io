@@ -428,6 +428,7 @@ transition: 0.5s;
 
 
 #spotify-panel{
+display:flex;
 margin:330px 18px 0 0;
 float: right;
 }
